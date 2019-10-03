@@ -1,0 +1,60 @@
+.panel {
+    background: #fff;
+    padding: var(--panel-padding);
+    border-radius: var(--border-radius);
+    margin-bottom: var(--panel-padding);
+    position: relative;
+    border: 1px solid rgba(138, 150, 170, 0.33);
+    box-shadow: 0 1px 1px #00000012, 0 2px 5px #0000001a;
+    
+    &.panel-primary {        
+        border-top: 3px solid var(--color-primary);
+    }
+    &.panel-secondary {        
+        border-top: 3px solid var(--color-secondary);
+    }
+    &.panel-approved,
+    &.panel-success,
+    &.panel-green {        
+        border-top: 3px solid var(--color-success);
+    }
+    &.panel-info,
+    &.panel-blue {        
+        border-top: 3px solid var(--color-info);
+    }
+    &.panel-error,
+    &.panel-red {        
+        border-top: 3px solid var(--color-error);
+    }
+    &.panel-declined,
+    &.panel-warning,
+    &.panel-orange {        
+        border-top: 3px solid var(--color-warning);
+    }
+}
+.panel-header {
+    margin-bottom: 1em;
+    margin: 12px -34px 12px;
+    padding: 12px 34px;
+    border-bottom: 2px solid #f9fafc;
+    &:first-child {
+        margin-top: -24px;
+    }
+    &.no-border {
+        border: 0 none;
+    }
+    &+.panel-table {
+        margin-top: 0;
+    }
+}
+.panel-table {
+    margin: calc(-1 * var(--panel-padding) );
+    .table {
+        border-radius: var(--border-radius);
+        margin-bottom: 0;
+    }
+    td, th {
+        padding: .75rem var(--panel-padding);
+        vertical-align: top;
+    }
+}

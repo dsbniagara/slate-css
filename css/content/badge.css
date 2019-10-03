@@ -1,0 +1,85 @@
+.badge {
+    font-size: .85em;
+    font-weight: bold;
+    padding: .3rem .8rem;
+    border-radius: 2em;
+    display: inline-block;
+
+    &--primary {
+        background: var(--color-primary);
+        color: #fff;
+    }
+    &--secondary {
+        background: var(--color-secondary);
+        color: #fff;
+    }
+    &--dark {
+        background: var(--color-dark);
+        color: #fff;
+    }
+    &--black {
+        background: var(--color-black);
+        color: #fff;
+    }
+    &--green,
+    &--approved,
+    &--success {
+        background: var(--color-success);
+        color: #fff;
+    }
+    &--info {
+        background: var(--color-info);
+        color: #fff;
+    }
+    &--danger {
+        background: var(--color-danger);
+        color: #fff;
+    }
+    &--warning {
+        background: var(--color-warning);
+        color: #fff;
+    }
+    &--light {
+        background: var(--color-light);
+        color: #fff;
+    }
+
+    &--invert-primary {
+        background: color(var(--color-primary) l(94%));
+        color: var(--color-primary);
+    }
+    &--invert-secondary {
+        background: color(var(--color-secondary) l(94%));
+        color: var(--color-secondary);
+    }
+    &--invert-dark {
+        background: color(var(--color-dark) l(94%));
+        color: var(--color-dark);
+    }
+    &--invert-black {
+        background: color(var(--color-black) l(94%));
+        color: var(--color-black);
+    }
+    &--invert-green,
+    &--invert-approved,
+    &--invert-success {
+        background: color(var(--color-success) l(94%));
+        color: var(--color-success);
+    }
+    &--invert-info {
+        background: color(var(--color-info) l(94%));
+        color: var(--color-info);
+    }
+    &--invert-danger {
+        background: color(var(--color-danger) l(94%));
+        color: var(--color-danger);
+    }
+    &--invert-warning {
+        background: color(var(--color-warning) l(94%));
+        color: var(--color-warning);
+    }
+    &--invert-light {
+        background: color(var(--color-light) d(94%));
+        color: var(--color-light);
+    }
+}

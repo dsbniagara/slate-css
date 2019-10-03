@@ -1,0 +1,30 @@
+.breadcrumb {
+    padding: 1em 0;
+    font-size: .86em;
+
+    a {
+        color: var(--color-text);
+        display: inline-block;
+        &:last-child {
+            opacity: .8;
+            font-weight: bold;
+        }
+        &:hover {
+            color: var(--color-primary);
+        }
+        &:after {
+            display: inline-block;
+            width: 5px;
+            height: 5px;
+            margin: 0 .8em;
+            content: "";
+            opacity: .2;
+            border-right: 2px solid var(--color-light);
+            border-bottom: 2px solid var(--color-light);
+            transform: rotate(-45deg);
+        }
+        &:last-child:after {
+            display: none;
+        }
+    }
+}

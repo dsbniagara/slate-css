@@ -1,0 +1,49 @@
+svg {
+    [class^="stroke-"]:not(.stroke-none),
+    [class^="fill-"]:not(.fill-none)  {
+        transition: ease all .2s;
+    }
+
+    .fill-none { fill:none; }
+    .fill-primary { fill: var(--color-primary); }
+    .fill-secondary { fill: var(--color-secondary); }
+    .fill-success { fill: var(--color-success); }
+    .fill-info { fill: var(--color-info); }
+    .fill-danger { fill: var(--color-danger); }
+    .fill-warning { fill: var(--color-warning); }
+    .fill-dark { fill: var(--color-dark); }
+    .fill-light { fill: var(--color-light); }
+
+    .stroke-none { stroke:none; }
+    .stroke-primary { stroke: var(--color-primary); }
+    .stroke-secondary { stroke: var(--color-secondary); }
+    .stroke-success { stroke: var(--color-success); }
+    .stroke-info { stroke: var(--color-info); }
+    .stroke-danger { stroke: var(--color-danger); }
+    .stroke-warning { stroke: var(--color-warning); }
+    .stroke-dark { stroke: var(--color-dark); }
+    .stroke-light { stroke: var(--color-light); }
+}
+a:hover {
+    svg {
+        .icon-hover-fill-none { fill:none; }
+        .icon-hover-fill-primary { fill: var(--color-primary); }
+        .icon-hover-fill-black { fill: var(--color-black); }
+        .icon-hover-fill-secondary { fill: var(--color-secondary); }
+        .icon-hover-fill-success { fill: var(--color-success); }
+        .icon-hover-fill-info { fill: var(--color-info); }
+        .icon-hover-fill-danger { fill: var(--color-danger); }
+        .icon-hover-fill-warning { fill: var(--color-warning); }
+        .icon-hover-fill-dark { fill: var(--color-dark); }
+        .icon-hover-fill-light { fill: var(--color-light); }
+    
+        .icon-hover-stroke-primary { stroke: var(--color-primary); }
+        .icon-hover-stroke-secondary { stroke: var(--color-secondary); }
+        .icon-hover-stroke-success { stroke: var(--color-success); }
+        .icon-hover-stroke-info { stroke: var(--color-info); }
+        .icon-hover-stroke-danger { stroke: var(--color-danger); }
+        .icon-hover-stroke-warning { stroke: var(--color-warning); }
+        .icon-hover-stroke-dark { stroke: var(--color-dark); }
+        .icon-hover-stroke-light { stroke: var(--color-light); }
+    }
+}

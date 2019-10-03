@@ -1,0 +1,44 @@
+{
+  "name": "@dsbn/slatecss",
+  "version": "0.0.1",
+  "main": "src/postcss/index.js",
+  "style": "build/slate.min.css",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepublishOnly": "gulp css:build",
+    "css:watch": "gulp",
+    "css:build": "gulp css:build"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^9.6.1",
+    "gulp": "^4.0.2",
+    "gulp-clean-css": "^4.2.0",
+    "gulp-postcss": "^8.0.0",
+    "postcss-color-function": "^4.1.0",
+    "postcss-cssnext": "^3.1.0",
+    "postcss-import": "^12.0.1",
+    "postcss-modules": "^1.4.1",
+    "postcss-nested": "^4.1.2",
+    "postcss-partial-import": "^4.1.0"
+  },
+  "dependencies": {
+    "fs-promise": "^2.0.3",
+    "gulp-rename": "^1.4.0",
+    "lodash": "^4.17.15",
+    "postcss-values-parser": "^3.0.5"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dsbniagara/slatecss.git"
+  },
+  "bugs": {
+    "url": "https://github.com/dsbniagara/slatecss/issues"
+  },
+  "homepage": "https://github.com/dsbniagara/slatecss#readme",
+  "description": ""
+}
