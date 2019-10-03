@@ -2,6 +2,7 @@
     "license": "MIT",
     "dependencies": {
         "fs-extra": "^7.0.1",
+        "postcss": "^7.0.18",
         "vuepress": "^1.0.3"
     },
     "scripts": {
