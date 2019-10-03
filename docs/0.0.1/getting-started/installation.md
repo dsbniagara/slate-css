@@ -25,7 +25,7 @@ module.exports = {
 
 ## Processing
 
-Add slate to your postcss config
+Add slate to your postcss.config.js
 
 ```js
 module.exports = {

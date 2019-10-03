@@ -4,6 +4,7 @@
         "fs-extra": "^7.0.1",
         "postcss": "^7.0.18",
         "vuepress": "^1.0.3",
+        "@dsbn/slatecss": "0.0.1",
         "postcss-loader": "^3.0.0"
     },
     "scripts": {
