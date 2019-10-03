@@ -3,15 +3,13 @@
     "dependencies": {
         "fs-extra": "^7.0.1",
         "postcss": "^7.0.18",
-        "vuepress": "^1.0.3"
+        "vuepress": "^1.0.3",
+        "postcss-loader": "^3.0.0"
     },
     "scripts": {
         "start": "npm run docs:dev",
         "docs:dev": "./node_modules/.bin/vuepress dev .",
         "docs:version": "node -e 'require(\"./.vuepress/lib/versioning.js\").generate()'",
         "docs:build": "./node_modules/.bin/vuepress build ."
-    },
-    "devDependencies": {
-        "postcss-loader": "^3.0.0"
     }
 }
