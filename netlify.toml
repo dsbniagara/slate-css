@@ -1,2 +1,3 @@
 [build]
-  base = "docs"
+  base = "docs/"
+  command = "npm run docs:build"
