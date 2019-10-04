@@ -22,5 +22,11 @@ module.exports = [
       'content/typography',
     ]
   },
+  {
+    title: 'Effects',
+    children: [
+      'effects/busy',
+    ]
+  },
   'changes'
 ]
