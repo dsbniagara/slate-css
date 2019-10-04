@@ -1,11 +1,13 @@
 {
     "license": "MIT",
     "dependencies": {
+        "@dsbn/slatecss": "0.0.1",
         "fs-extra": "^7.0.1",
         "postcss": "^7.0.18",
-        "vuepress": "^1.0.3",
-        "@dsbn/slatecss": "0.0.1",
-        "postcss-loader": "^3.0.0"
+        "postcss-color-function": "^4.1.0",
+        "postcss-loader": "^3.0.0",
+        "postcss-nested": "^4.1.2",
+        "vuepress": "^1.0.3"
     },
     "scripts": {
         "start": "npm run docs:dev",
