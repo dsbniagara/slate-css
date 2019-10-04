@@ -28,10 +28,10 @@ Colors are provided to match states, but also come with utility classes to help 
 <p><div class="badge bg-info">.bg-info</div>
 <div class="badge color-info">.color-info</div></p>
 
-<p><b class="color-error">error</b></p>
-<div class="color-color color-error">--color-error</div>
-<p><div class="badge bg-error">.bg-error</div>
-<div class="badge color-error">.color-error</div></p>
+<p><b class="color-danger">danger</b></p>
+<div class="color-color color-danger">--color-danger</div>
+<p><div class="badge bg-danger">.bg-danger</div>
+<div class="badge color-danger">.color-danger</div></p>
 
 <p><b class="color-dark">dark</b></p>
 <div class="color-color color-dark">--color-dark</div>
