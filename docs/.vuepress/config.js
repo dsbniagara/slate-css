@@ -3,7 +3,7 @@ const versioning = require('./lib/versioning.js')
 module.exports = {
     postcss: {
         plugins: [
-            require('../../src/postcss',{}),
+            require('@dsbn/slatecss'),
             require('postcss-nested',{}),
             require('postcss-color-function', {}),
         ]
