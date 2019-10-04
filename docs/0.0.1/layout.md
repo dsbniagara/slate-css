@@ -36,7 +36,7 @@ The grid will break down to a single column at the set ``$break-width``. Default
 </div>
 ```
 
-# Utilities
+## Utilities
 
 There is also the enevitable ``.flex`` utility class to apply display: flex onto your desired element. Two additional utility classes exist for spacing assistance.
 
