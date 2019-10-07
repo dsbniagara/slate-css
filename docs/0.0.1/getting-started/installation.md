@@ -5,7 +5,16 @@
 ## Install via npm
 
 ```bash
-npm i -s @dsbn/slatecss
+npm i -s @dsbn/slate-css
+```
+
+### Install dependancies
+
+There are a few post css plugins required by ``@dsbn/slate-css`` to be in your project.
+
+```bash
+npm i -s postcss-nested
+npm i -s postcss-color-function
 ```
 
 ## Insert into your styles
@@ -35,7 +44,9 @@ Add slate to your postcss.config.js
 module.exports = {
   plugins: [
     // ...
-    require('@dsbn/slatecss'),
+    require('@dsbn/slate-css'),
+    require('postcss-nested'),
+    require('postcss-color-function'),
     // ...
   ]
 }

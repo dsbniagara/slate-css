@@ -1,5 +1,6 @@
 {
   "name": "@dsbn/slate-css",
+  "description": "Slate is a CSS framework for building web sites / apps",
   "version": "0.0.1",
   "main": "src/postcss/index.js",
   "style": "build/slate.min.css",
@@ -34,11 +35,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/dsbniagara/slatecss.git"
+    "url": "git+https://github.com/dsbniagara/slate-css.git"
   },
   "bugs": {
-    "url": "https://github.com/dsbniagara/slatecss/issues"
+    "url": "https://github.com/dsbniagara/slate-css/issues"
   },
-  "homepage": "https://github.com/dsbniagara/slatecss#readme",
-  "description": ""
+  "homepage": "https://github.com/dsbniagara/slate-css#readme"
 }

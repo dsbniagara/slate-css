@@ -9,7 +9,7 @@ module.exports = {
         ]
     },
     title: '@dsbn/slate-css',
-    description: 'Slate is a CSS framework for building websites / web apps',
+    description: 'Slate is a CSS framework for building web sites / apps',
     head: [
         ['link', {
             rel: 'icon',
@@ -17,9 +17,10 @@ module.exports = {
         }]
     ],
     themeConfig: {
+        packageName: '@dsbn/slate-css',
         editLinks: true, //  "Edit this page" at the bottom of each page
         lastUpdated: 'Last Updated', //  "Last Updated" at the bottom of each page
-        repo: '-', //  Github repo
+        repo: 'https://github.com/dsbniagara/slate-css', //  Github repo
         docsDir: 'docs/', //  Github repo docs folder    
         versions: {
             latest: versioning.versions.latest,
