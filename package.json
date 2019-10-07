@@ -1,5 +1,5 @@
 {
-  "name": "@dsbn/slatecss",
+  "name": "@dsbn/slate-css",
   "version": "0.0.1",
   "main": "src/postcss/index.js",
   "style": "build/slate.min.css",

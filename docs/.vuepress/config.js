@@ -3,23 +3,18 @@ const versioning = require('./lib/versioning.js')
 module.exports = {
     postcss: {
         plugins: [
-            require('@dsbn/slatecss'),
+            require('@dsbn/slate-css'),
             require('postcss-nested',{}),
             require('postcss-color-function', {}),
         ]
     },
-    title: 'slatecss',
-    description: 'CSS framework',
+    title: '@dsbn/slate-css',
+    description: 'Slate is a CSS framework for building websites / web apps',
     head: [
         ['link', {
             rel: 'icon',
             href: '/favicon.png'
-        }],
-        ['link', {
-            rel: 'stylesheet',
-            type: 'text/css',
-            href: 'https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,800,800i,900,900i'
-        },]
+        }]
     ],
     themeConfig: {
         editLinks: true, //  "Edit this page" at the bottom of each page
