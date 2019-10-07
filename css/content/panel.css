@@ -4,7 +4,6 @@
     border-radius: var(--border-radius);
     margin-bottom: var(--panel-padding);
     position: relative;
-    border: 1px solid rgba(138, 150, 170, 0.33);
     box-shadow: 0 1px 1px #00000012, 0 2px 5px #0000001a;
     
     &.panel-primary {        
