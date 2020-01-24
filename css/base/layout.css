@@ -3,25 +3,3 @@
     margin: 0 auto;
     padding: 0 20px;
 }
-.flex {    
-    display: flex;
-    &-around {    
-        justify-content: space-around;
-    }
-    &-between {    
-        justify-content: space-between;
-    }
-}
-.flex-grid {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: wrap;
-    @media (--phone-viewport) {
-        display: block;
-    }
-
-    .col {
-      padding: var(--col-spacing) 0;
-      flex: 1 1 auto;
-    }
-}

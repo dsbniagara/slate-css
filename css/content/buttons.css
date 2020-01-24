@@ -1,7 +1,7 @@
 .btn {
     display: inline-flex;
     align-items: center;
-    padding: .7em 2em;
+    padding: .7rem 1.5rem;
     line-height: 1.4em;
     border: 0 none;
     color: #fff;
@@ -13,7 +13,7 @@
     cursor: default;
     box-shadow: 0 1px 1px #00000012, 0 2px 3px #0000000f;
     background: var(--color-primary);
-    border: 1px solid color( var(--color-primary) shade(10%));
+    border: 0 none;
 
     &:hover {
         color: #fff;
@@ -21,7 +21,6 @@
         box-shadow: 0 1px 1px #00000029, 0 3px 3px #0000001f;
     }
     &:active {
-        transform: scale(.98);
     }
     &:focus {
         outline: none;
@@ -34,13 +33,13 @@
     }
     &--link {
         background: transparent;
-        border: 1px solid transparent;
+        
         color: var(--color-primary);
         box-shadow: none;
         &:hover {
             background: transparent;
             box-shadow: none;
-            color: color( var(--color-primary) l(60%));
+            color: var(--color-primary-hover);
         }
         &:focus {
             box-shadow: none;
@@ -48,7 +47,7 @@
     }
     &--secondary {
         background: var(--color-secondary);
-        border: 1px solid color( var(--color-secondary) shade(10%));
+        
         &:hover {
             color: #fff;
             background:  color( var(--color-secondary) tint(10%));
@@ -59,7 +58,7 @@
     }
     &--danger {
         background: var(--color-danger);
-        border: 1px solid color( var(--color-danger) shade(10%));
+        
         &:hover {
             color: #fff;
             background: color( var(--color-danger) tint(10%));
@@ -70,7 +69,7 @@
     }
     &--warning {
         background: var(--color-warning);
-        border: 1px solid color( var(--color-warning) shade(10%));
+        
         &:hover {
             color: #fff;
             background: color( var(--color-warning) tint(10%));            
@@ -81,7 +80,7 @@
     }
     &--success {
         background: var(--color-success);
-        border: 1px solid color( var(--color-success) shade(10%));
+        
         &:hover {
             color: #fff;
             background: color( var(--color-success) tint(10%));
@@ -92,7 +91,7 @@
     }
     &--info {
         background: var(--color-info);
-        border: 1px solid color( var(--color-info) shade(10%));
+        
         &:hover {
             color: #fff;
             background: color( var(--color-info) tint(10%));
@@ -104,7 +103,7 @@
     &--light {
         color: var(--color-dark);
         background: #F9FAFA;
-        border: 1px solid #C4CDD5;
+        
         &:hover {
             color: var(--color-dark);
             background: color( #F9FAFA shade(3%));
@@ -115,7 +114,7 @@
     }
     &--dark {
         background: var(--color-dark);
-        border: 1px solid color( var(--color-dark) shade(10%));
+        
         &:hover {
             color: #fff;
             background: color( var(--color-dark) tint(10%));
@@ -138,4 +137,6 @@
         width: 100%;
         display: block;
     }
+
+   
 }

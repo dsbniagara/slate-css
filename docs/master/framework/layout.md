@@ -36,12 +36,16 @@ The grid will break down to a single column at the set ``$break-width``. Default
 </div>
 ```
 
-## Utilities
+## Flex Helpers
 
 There is also the enevitable ``.flex`` utility class to apply display: flex onto your desired element. Two additional utility classes exist for spacing assistance.
 
 ``.flex`` implements ``display: flex``;
 
-``.flex-around`` implements ``justify-content: space-around;``
+``.flex--around`` implements ``justify-content: space-around;``
 
-``.flex-between`` implements ``justify-content: space-between;``
+``.flex--between`` implements ``justify-content: space-between;``
+
+``.flex--center`` implements ``justify-content: center;``
+
+``.flex--column`` implements ``flex-direction: column;``

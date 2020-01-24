@@ -1,4 +1,4 @@
-# SVG
+# Icons
 
 A set of color classes are provided to easily add framework colors to svgs. Use with both stroke and fill.
 

@@ -1,4 +1,4 @@
-# @dsbn/slate-css  
+# Introduction
 
 Slate is a CSS framework for building web sites / apps
 

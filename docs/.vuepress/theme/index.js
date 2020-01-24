@@ -12,8 +12,6 @@ module.exports = (options, ctx) => {
         .some(base => themeConfig.locales[base].algolia)
   )
 
-  const enableSmoothScroll = themeConfig.smoothScroll === true
-
   return {
     alias () {
       return {
@@ -47,8 +45,7 @@ module.exports = (options, ctx) => {
           '/': 'WARNING',
           '/zh/': '警告'
         }
-      }],
-      ['smooth-scroll', enableSmoothScroll]
+      }]
     ]
   }
 }

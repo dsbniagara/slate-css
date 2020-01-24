@@ -1,8 +1,6 @@
 {
     "license": "MIT",
     "dependencies": {
-        "@dsbn/slate-css": "0.0.1",
-        "@dsbn/slatecss": "0.0.1",
         "fs-extra": "^7.0.1",
         "postcss": "^7.0.18",
         "postcss-color-function": "^4.1.0",

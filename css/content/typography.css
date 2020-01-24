@@ -47,7 +47,7 @@ a {
     background-color: transparent;
     -webkit-text-decoration-skip: objects;
     &:hover {
-        color: color( var(--color-a) l(60%));
+        color: var(--color-a-hover);
         text-decoration: none;
     }
 }
@@ -67,4 +67,9 @@ dl, ol, ul {
 }
 ol ol, ol ul, ul ol, ul ul {
     margin-bottom: 0;
+}
+
+.text-empty {
+    font-style: italic;
+    color: rgba(0,0,0,0.5);
 }

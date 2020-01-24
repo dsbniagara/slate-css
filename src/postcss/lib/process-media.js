@@ -3,6 +3,8 @@ const transformMediaList = require('../util/transform-media-list');
 
 module.exports = function (config) {
     
+	//console.log("@dsbn/slate-css processMedia",config);
+    
 	const cssMedias = {};
 	for (const key in config) {
 		cssMedias[key] = mediaASTFromString(config[key]);

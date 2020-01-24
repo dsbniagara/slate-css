@@ -1,33 +1,40 @@
+
+
+
+
 .panel {
-    background: #fff;
     padding: var(--panel-padding);
     border-radius: var(--border-radius);
     margin-bottom: var(--panel-padding);
     position: relative;
     box-shadow: 0 1px 1px #00000012, 0 2px 5px #0000001a;
     
-    &.panel-primary {        
+    &.panel--flat {
+        box-shadow: none;
+    }
+    
+    &--primary {        
         border-top: 3px solid var(--color-primary);
     }
-    &.panel-secondary {        
+    &--secondary {        
         border-top: 3px solid var(--color-secondary);
     }
-    &.panel-approved,
-    &.panel-success,
-    &.panel-green {        
+    &--approved,
+    &--success,
+    &--green {        
         border-top: 3px solid var(--color-success);
     }
-    &.panel-info,
-    &.panel-blue {        
+    &--info,
+    &--blue {        
         border-top: 3px solid var(--color-info);
     }
-    &.panel-error,
-    &.panel-red {        
+    &--error,
+    &--red {        
         border-top: 3px solid var(--color-error);
     }
-    &.panel-declined,
-    &.panel-warning,
-    &.panel-orange {        
+    &--declined,
+    &--warning,
+    &--orange {        
         border-top: 3px solid var(--color-warning);
     }
 }
@@ -44,6 +51,9 @@
     }
     &+.panel-table {
         margin-top: 0;
+    }
+    .title {
+        color: var(--color-light);
     }
 }
 .panel-table {

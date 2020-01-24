@@ -1,5 +1,6 @@
 @import 'base/reset.css';
 @import 'base/color.css';
+@import 'base/flex.css';
 @import 'base/layout.css';
 
 @import 'content/typography.css';
@@ -11,5 +12,10 @@
 @import 'content/breadcrumb.css';
 @import 'content/badge.css';
 @import 'content/panel.css';
+@import 'content/nav.css';
 
 @import 'effects/aria-busy.css';
+
+@import 'base/width.css';
+@import 'base/utility.css';
+@import 'base/visibility.css';

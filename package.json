@@ -1,7 +1,7 @@
 {
   "name": "@dsbn/slate-css",
   "description": "Slate is a CSS framework for building web sites / apps",
-  "version": "0.0.1",
+  "version": "0.1.0-alpha.1",
   "main": "src/postcss/index.js",
   "style": "build/slate.min.css",
   "directories": {

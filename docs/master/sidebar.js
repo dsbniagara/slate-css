@@ -6,20 +6,29 @@ module.exports = [
       'getting-started/installation',
     ]
   },
-  'layout',
-  'colors',
+  {
+    title: 'Framework',
+    children: [
+      'framework/buttons',
+      'framework/colors',
+      'framework/forms',
+      'framework/icons',
+      'framework/layout',
+      'framework/list',
+      'framework/space',
+      'framework/tables',
+      'framework/typography',
+      'framework/utility',
+      'framework/visibility',
+    ]
+  },
   {
     title: 'Content',
     children: [
       'content/badge',
       'content/breadcrumb',
-      'content/buttons',
-      'content/forms',
-      'content/list',
+      'content/nav',
       'content/panel',
-      'content/svg',
-      'content/tables',
-      'content/typography',
     ]
   },
   {

@@ -5,6 +5,8 @@ const { parse } = require('postcss-values-parser');
 
 module.exports = function (config) {
     
+	//console.log("@dsbn/slate-css processCssVars",config);
+    
 	const cssProperties = {};
 	for (const key in config) {
 		cssProperties[key] = parse(String(config[key])).nodes;	
