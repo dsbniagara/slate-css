@@ -7,12 +7,16 @@ const processMedia = require('./lib/process-media');
 
 const plugin = postcss.plugin('@dsbn/slate-css', function(options) {
 	var conf = config.load('slate.config.js');
-	console.log("@dsbn/slate-css",conf);
-	return postcss([
-		transformAtRules(conf),
-		processCssVars(conf),
-		processMedia(conf)
-	]);
+	var plugins = [
+		transformAtRules(conf)
+	];	
+	if( !options || options.replaceCSSVars !== false ) {
+		plugins.push( processCssVars(conf) );
+	}
+	if( !options || options.replaceMediaQueries !== false ) {
+		plugins.push( processMedia(conf) );
+	}
+	return postcss(plugins);
 })
 
 module.exports = plugin;
