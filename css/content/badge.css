@@ -79,7 +79,7 @@
         color: var(--color-warning);
     }
     &--invert-light {
-        background: color(var(--color-light) d(94%));
+        background: color(var(--color-light) shade(94%));
         color: var(--color-light);
     }
 }
