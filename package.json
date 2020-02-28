@@ -1,7 +1,7 @@
 {
   "name": "@dsbn/slate-css",
-  "description": "Slate is a CSS framework for building web sites / apps",
-  "version": "0.1.0-alpha.2",
+  "description": "Slate is a ui system for building web sites / apps",
+  "version": "0.1.0-alpha.3",
   "main": "src/postcss/index.js",
   "style": "build/slate.min.css",
   "directories": {
@@ -9,6 +9,7 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "docs": "parcel serve --no-cache --port 1236 docs/index.html",
     "prepublishOnly": "gulp css:build",
     "css:watch": "gulp",
     "css:build": "gulp css:build"
@@ -16,14 +17,14 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "autoprefixer": "^9.6.1",
+    "autoprefixer": "^9.7.4",
     "gulp": "^4.0.2",
     "gulp-clean-css": "^4.2.0",
     "gulp-postcss": "^8.0.0",
     "postcss-color-function": "^4.1.0",
     "postcss-cssnext": "^3.1.0",
     "postcss-import": "^12.0.1",
-    "postcss-modules": "^1.4.1",
+    "postcss-modules": "^1.5.0",
     "postcss-nested": "^4.1.2",
     "postcss-partial-import": "^4.1.0"
   },
@@ -31,6 +32,7 @@
     "fs-promise": "^2.0.3",
     "gulp-rename": "^1.4.0",
     "lodash": "^4.17.15",
+    "postcss-for": "^2.1.1",
     "postcss-values-parser": "^3.0.5"
   },
   "repository": {

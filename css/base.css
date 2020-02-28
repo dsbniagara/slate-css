@@ -2,20 +2,19 @@
 @import 'base/color.css';
 @import 'base/flex.css';
 @import 'base/layout.css';
+@import 'base/spacing.css';
+@import 'base/visibility.css';
 
-@import 'content/typography.css';
-@import 'content/form.css';
-@import 'content/svg.css';
-@import 'content/buttons.css';
-@import 'content/table.css';
-@import 'content/list.css';
-@import 'content/breadcrumb.css';
-@import 'content/badge.css';
-@import 'content/panel.css';
-@import 'content/nav.css';
+@import 'base/typography.css';
+@import 'base/form.css';
+@import 'base/buttons.css';
+
+@import 'base/table.css';
+@import 'components/list.css';
+@import 'components/breadcrumb.css';
+@import 'components/badge.css';
+@import 'components/panel.css';
+@import 'components/nav.css';
+@import 'components/svg.css';
 
 @import 'effects/aria-busy.css';
-
-@import 'base/width.css';
-@import 'base/utility.css';
-@import 'base/visibility.css';

@@ -12,21 +12,7 @@
     &--column {    
         flex-direction: column;
     }
-    &--align-center {
+    &--a-center {
         align-items: center;
-    }
-}
-.flex-grid {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: wrap;
-
-    @media (--phone-viewport) {
-        display: block;
-    }
-
-    .col {
-      padding: 0 var(--col-spacing);
-      flex: 1 1 auto;
     }
 }

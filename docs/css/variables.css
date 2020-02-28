@@ -1,0 +1,131 @@
+:root {
+    /* Type */
+    --font-size-xxs: .4rem;
+    --font-size-xs: .6rem;
+    --font-size-s: .8rem;
+    --font-size: 11pt;
+    --font-size-l: 2rem;
+    --font-size-xl: 3rem;
+    --font-size-xxl: 5rem;
+    --font-size-xxxl: 7rem;
+
+    --font-h1-size: 3rem;
+    --font-h2-size: 2em;
+    --font-h3-size: 1.8em;
+    --font-h4-size: 1.3em;
+    --font-h5-size: 1.2em;
+    --font-h6-size: 1.1em;
+
+    --font-family-sans-serif: 'Inter', sans-serif; /*-apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";*/
+    --font-family-heading: 'Inter', sans-serif;
+    --font-family-button: 'Inter', sans-serif;
+    
+    /* Colors */
+    --color-primary-lighter: hsl(206, 65%, 80%);
+    --color-primary-light: hsl(206, 65%, 70%);
+    --color-primary: hsl(206, 65%, 60%);
+    --color-primary-dark: hsl(206, 65%, 40%);
+    --color-primary-darker: hsl(206, 65%, 20%);
+    --color-primary-a-10: hsla(206, 65%, 60%, .10);
+    --color-primary-a-20: hsla(206, 65%, 60%, .20);
+    --color-primary-a-30: hsla(206, 65%, 60%, .30);
+    --color-primary-a-40: hsla(206, 65%, 60%, .40);
+    --color-primary-a-50: hsla(206, 65%, 60%, .50);
+    --color-primary-a-60: hsla(206, 65%, 60%, .60);
+    --color-primary-a-70: hsla(206, 65%, 60%, .70);
+    --color-primary-a-80: hsla(206, 65%, 60%, .80);
+    --color-primary-a-90: hsla(206, 65%, 60%, .90);
+
+    --color-gray-lighter: hsl(205, 8%, 95%);
+    --color-gray-light: hsl(205, 8%, 80%);
+    --color-gray: hsl(205, 8%, 50%);
+    --color-gray-dark: hsl(205, 8%, 40%);
+    --color-gray-darker: hsl(205, 8%, 20%);
+    --color-gray-a-10: hsla(205, 8%, 50%, .10);
+    --color-gray-a-20: hsla(205, 8%, 50%, .20);
+    --color-gray-a-30: hsla(205, 8%, 50%, .30);
+    --color-gray-a-40: hsla(205, 8%, 50%, .40);
+    --color-gray-a-50: hsla(205, 8%, 50%, .50);
+    --color-gray-a-60: hsla(205, 8%, 50%, .60);
+    --color-gray-a-70: hsla(205, 8%, 50%, .70);
+    --color-gray-a-80: hsla(205, 8%, 50%, .80);
+    --color-gray-a-90: hsla(205, 8%, 50%, .90);
+
+    --color-accent-lighter: hsl(27, 94%, 95%);
+    --color-accent-light: hsl(27, 94%, 80%);
+    --color-accent: hsl(27, 94%, 47%);
+    --color-accent-dark: hsl(27, 94%, 40%);
+    --color-accent-darker: hsl(27, 94%, 20%);
+    --color-accent-a-10: hsla(27, 94%, 47%, .10);
+    --color-accent-a-20: hsla(27, 94%, 47%, .20);
+    --color-accent-a-30: hsla(27, 94%, 47%, .30);
+    --color-accent-a-40: hsla(27, 94%, 47%, .40);
+    --color-accent-a-50: hsla(27, 94%, 47%, .50);
+    --color-accent-a-60: hsla(27, 94%, 47%, .60);
+    --color-accent-a-70: hsla(27, 94%, 47%, .70);
+    --color-accent-a-80: hsla(27, 94%, 47%, .80);
+    --color-accent-a-90: hsla(27, 94%, 47%, .90);
+
+    --color-dark-lighter: hsl(209, 22%, 80%);
+    --color-dark-light: hsl(209, 22%, 70%);
+    --color-dark: hsl(209, 22%, 54%);
+    --color-dark-dark: hsl(209, 22%, 40%);
+    --color-dark-darker: hsl(209, 22%, 20%);
+    --color-dark-a-10: hsla(209, 22%, 54%, .10);
+    --color-dark-a-20: hsla(209, 22%, 54%, .20);
+    --color-dark-a-30: hsla(209, 22%, 54%, .30);
+    --color-dark-a-40: hsla(209, 22%, 54%, .40);
+    --color-dark-a-50: hsla(209, 22%, 54%, .50);
+    --color-dark-a-60: hsla(209, 22%, 54%, .60);
+    --color-dark-a-70: hsla(209, 22%, 54%, .70);
+    --color-dark-a-80: hsla(209, 22%, 54%, .80);
+    --color-dark-a-90: hsla(209, 22%, 54%, .90);
+
+    --color-bg: hsl(220, 33%, 98%);
+    --color-text: hsl(210, 11%, 15%);
+    --color-text-faded: hsl(210, 6%, 43%);
+    --color-text-heading: hsl(210, 18%, 26%);
+    
+    /* Spacing */
+    --space-xxs: .4rem;
+    --space-xs: .6rem;
+    --space-s: .8rem;
+    --space: 1rem;
+    --space-l: 1.2rem;
+    --space-xl: 1.6rem;
+    --space-xxl: 2rem;
+
+    /* Layout*/
+    --layout-width: 1600px;
+
+    --shadow: 0px 1px 0px 1px rgba(0, 0, 0, 0.05), 0px 3px 6px 0px rgba(0, 0, 0, 0.05);
+    --shadow-over: 0px 2px 0px 1px rgba(0, 0, 0, 0.1), 0px 6px 6px 0px rgba(0, 0, 0, 0.05);
+    --shadow-active: 0px 0px 2px 2px var(--color-primary-a-60), 0px 2px 0px 1px rgba(0, 0, 0, 0.1), 0px 6px 6px 0px rgba(0, 0, 0, 0.05);
+    --shadow-up: 0px 1px 1px 1px rgba(0, 0, 0, 0.07), 0px 6px 13px 0px rgba(0, 0, 0, 0.22);
+
+    --border-input: 1px solid #d7dce6;
+    --border-input-hover: 1px solid #b2b9c7;
+    --border-input-active: 1px solid var(--color-primary);
+
+    --box-shadow-input: 0 1px 1px #0000000f;
+    --box-shadow-input-hover: none;
+    --box-shadow-input-active: 0px 0px 0px 2px var(--color-primary-a-10), 0px 1px 4px 1px var(--color-primary-a-20);
+
+    --size-checkbox-radio: 18px;
+
+    --border-radius-input: 6px;
+    --border-radius: 12px;
+
+    --panel-padding: 34px;
+    --list-spacing: 1em;
+    --col-spacing: 20px;
+    --grid-break: 400px;
+    --break-width: 700px;
+
+    --phone-viewport: (max-width: 768px);
+    --large-viewport: (min-width: 768px);
+    
+    --shadow-up: 0px 1px 1px 1px rgba(0, 0, 0, 0.01), 0px 6px 13px 0px rgba(0, 0, 0, 0.13);
+
+
+}

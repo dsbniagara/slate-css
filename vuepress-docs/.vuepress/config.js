@@ -1,4 +1,4 @@
-const versioning = require('./lib/versioning.js')
+const versioning = require('./lib/versioning.js.js')
 
 module.exports = {
     postcss: {

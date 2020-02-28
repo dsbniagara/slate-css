@@ -5,7 +5,7 @@
     color: var(--color-dark);
 }
 .color--light {
-    color: var(--color-light);
+    color: var(--color-gray-light);
 }
 .color--secondary {
     color: var(--color-secondary);

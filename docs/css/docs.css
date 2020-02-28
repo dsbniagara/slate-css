@@ -1,0 +1,174 @@
+@import '../fonts/inter.css';
+@import './variables.css';
+
+@slate base;
+h1,h2,h3,h4,h5,h6 {
+    font-weight: bold;
+}
+body > header.container {
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    border-bottom: 1px solid var(--color-gray-lighter);
+    padding: var(--space);
+    z-index: 99;
+
+    .brand {
+        color: var(--color-text);
+        font-size: var(--font-size-l);
+        font-weight: bold;
+    }
+    .badge {
+        margin: 0 var(--space-xl);
+    }
+
+    .nav {
+        a {
+            color: var(--color-gray);
+            &:hover {
+                color: var(--color-primary);
+            }
+        }
+    }
+}
+
+body > .page .page-nav {
+    margin: 0 calc(-1*var(--space));
+    .nav-link {
+        color: var(--color-text);
+    }
+}
+
+section.hero {
+    z-index: 1;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 80vh;
+    background-color: #ffffff;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60' viewBox='0 0 60 60'%3E%3Ccircle cx='1' cy='1' r='1' fill='%2375818a' fill-opacity='1'%3E%3C/circle%3E%3C/svg%3E");
+
+    h1 {
+        font-size: var(--font-size-xxl);
+        b {
+            position: relative;
+            &:after {
+                left: 0;
+                bottom: 4px;
+                position: absolute;
+                display: block;
+                content: " ";
+                height: 4px;
+                border-radius: 4px;
+                width: 100%;
+                background: var(--color-primary);
+            }
+        }
+    }
+    
+    p {
+        max-width: 500px;
+    }
+
+    .rectangular-plane {
+        position: absolute;
+        top: 0;
+        left: 20%;
+        right: 20%;
+        bottom: 0;
+        transform: rotate(-13deg);
+
+        .rectangular-group {
+            position: absolute;
+            left: -0%;
+            top: -5%;
+
+            &:nth-child(2) {
+                left: auto;
+                right: -20%;
+                top: 20%;
+            }
+            &:nth-child(3) {
+                left: auto;
+                top: 30%;
+                left: -20%;
+            }
+            &:nth-child(4) {
+                left: auto;
+                top: 70%;
+                right: 0;
+                transform: rotate(90deg);
+            }
+            &:nth-child(5) {
+                left: -20%;
+                top: 10%;
+            }
+            &:nth-child(6) {
+                left: 20%;
+                top: 60%;
+            }
+            .rectangle {
+                background: var(--color-primary);
+                border-radius: 4px;
+                width: calc(3*var(--space));
+                height: calc(3*var(--space));
+                box-shadow: var(--shadow);
+                margin-top: var(--space);
+            }
+            .rectangle--s {
+                width: calc(2.4*var(--space));
+                height: calc(2.4*var(--space));
+            }
+            .rectangle--l {
+                width: calc(4*var(--space));
+                height: calc(4*var(--space));
+            }
+            .rectangle--xl {
+                width: calc(6*var(--space));
+                height: calc(6*var(--space));
+            }
+            .rectangle--xxl {
+                width: calc(10*var(--space));
+                height: calc(10*var(--space));
+            }
+            .rectangle--gray {
+                background: var(--color-gray-light);
+            }
+            .rectangle--accent {
+                background: var(--color-accent);
+            }
+            .rectangle--dark {
+                background: linear-gradient(var(--color-dark-darker),var(--color-dark));
+            }
+            .rectangle--outline {
+                border: 1px solid var(--color-primary);
+                background: none;
+                &.rectangle--gray {
+                    border-color: var(--color-gray-light);
+                }
+            }
+        }
+    }
+    
+}
+
+
+section.pitch-deck {
+    .icon {
+        background: var(--color-primary-a-30);
+        display: inline-flex;
+        width: calc(3*var(--space));
+        height: calc(3*var(--space));
+        position: relative;
+        border-radius: 4px;
+        svg {
+            width: calc(3*var(--space));
+            height: calc(3*var(--space));
+            position: absolute;
+            left: -22px;
+            top: 12px;            
+        }
+    }
+}

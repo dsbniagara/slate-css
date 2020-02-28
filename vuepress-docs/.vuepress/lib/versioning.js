@@ -1,7 +1,7 @@
 // This file does not work with hot reloading
 // Restart the dev server to apply changes
 
-const versions = require('../versions.json')
+const versions = require('../versions.json.js')
 const fse = require('fs-extra')
 const path = process.cwd()
 
