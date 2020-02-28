@@ -44,9 +44,9 @@
     padding: .5rem var(--space);
     cursor: default;
     
-    &.router-link-active,
     &.active {
-        font-weight: 500;
+      font-weight: 500;
+      color: var(--color-primary);
     }
 
     &:hover {
@@ -65,7 +65,7 @@
       color: rgba(0, 0, 0, .6);
       font-weight: 500;
       padding: 0 1.4rem;
-      &.router-link-active {
+      &.active {
           color: rgba(0, 0, 0,1) !important;
           font-weight: bold;
           &:after {

@@ -94,6 +94,17 @@
     --space-l: 1.2rem;
     --space-xl: 1.6rem;
     --space-xxl: 2rem;
+    --space-2: 2rem;
+    --space-3: 3rem;
+    --space-4: 4rem;
+    --space-5: 5rem;
+    --space-6: 6rem;
+    --space-7: 7rem;
+    --space-8: 8rem;
+    --space-9: 9rem;
+    --space-10: 10rem;
+    --space-11: 11rem;
+    --space-12: 12rem;
 
     /* Layout*/
     --layout-width: 1600px;

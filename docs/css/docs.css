@@ -46,7 +46,7 @@ section.hero {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    height: 80vh;
+    height: 70vh;
     background-color: #ffffff;
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60' viewBox='0 0 60 60'%3E%3Ccircle cx='1' cy='1' r='1' fill='%2375818a' fill-opacity='1'%3E%3C/circle%3E%3C/svg%3E");
 
@@ -171,4 +171,11 @@ section.pitch-deck {
             top: 12px;            
         }
     }
+}
+
+pre.code {
+    padding: var(--space-2);
+    background: var(--color-gray-lighter);
+    border-radius: var(--border-radius);
+    margin: var(--space-2) 0;
 }

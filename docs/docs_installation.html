@@ -21,7 +21,7 @@
             <div class="col-md-2">
                 <nav class="page-nav nav nav--stacked">
                     <a class="nav-link" href="docs.html">Introduction</a>
-                    <a class="nav-link" href="docs_installation.html">Installation</a>
+                    <a class="nav-link" class="active" href="docs_installation.html">Installation</a>
                     <a class="nav-link" href="#">Typography</a>
                     <a class="nav-link" href="#">Layout</a>
                     <a class="nav-link" href="#">Forms</a>
@@ -32,7 +32,27 @@
                 </nav>
             </div>
             <div class="col-md-9">
-                <h1>Documentation</h1>
+                <h1>Installation</h1>
+                
+                <p>To install slate, start with installing from our npm package along with a few post-css dependancies.</p>
+
+<pre class="code">npm i -s @dsbn/slate-css postcss-nested postcss-for</pre>
+
+                <p>The next step is to configure your postcss setup. There are many different options for this but a simple setup is with a new slate.config.js file:</p>
+
+<pre class="code">module.exports = {
+    plugins: [
+      // ...
+      require('@dsbn/slate-css'),
+      require('postcss-nested'),
+      require('postcss-for'),
+      // ...
+    ]
+}</pre>
+
+                <p>To add slate to your pipeline, insert the slate base include into your main css file:</p>
+
+                <pre class="code">@slate base;</pre>
             </div>
         </div>
     </section>
