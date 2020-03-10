@@ -1,21 +1,23 @@
-const postcss = require('postcss');
 const config = require('./config');
+const postcss = require('postcss');
+
+const vars   = require('postcss-simple-vars');
+const mixins = require('postcss-mixins');
+const nested = require('postcss-nested');
+const forLoop = require('postcss-for');
 
 const transformAtRules = require('./lib/transform-at-rules');
-const processCssVars = require('./lib/process-css-vars');
-const processMedia = require('./lib/process-media');
 
 const plugin = postcss.plugin('@dsbn/slate-css', function(options) {
-	var conf = config.load('slate.config.js');
+	var configuration = config.load('slate.config.js');
+	
 	var plugins = [
-		transformAtRules(conf)
-	];	
-	if( !options || options.replaceCSSVars !== false ) {
-		plugins.push( processCssVars(conf) );
-	}
-	if( !options || options.replaceMediaQueries !== false ) {
-		plugins.push( processMedia(conf) );
-	}
+		transformAtRules(),
+		nested(),
+		mixins(),
+		forLoop(),
+		vars({variables: configuration})
+	];
 	return postcss(plugins);
 })
 

@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout - Slate</title>
+    <link rel="stylesheet" href="./css/docs.css" />
+</head>
+<body data-theme="docs">
+    <header class="container">
+        <a class="brand" href="index.html">slate</a>
+        <span class="badge badge--primary">0.1.0</span>
+        <nav class="nav">
+            <div class="nav-item"><a href="docs.html" class="nav-link">Docs</a></div>
+            <div class="nav-item"><a href="docs.html" class="nav-link">Components</a></div>
+            <div class="nav-item"><a href="docs.html" class="nav-link">Globals</a></div>
+        </nav>
+    </header>
+    <section class="page container">
+        <div class="row">
+            <div class="col-2">
+                <nav class="page-nav nav nav--stacked">
+                    <a class="nav-link" href="docs.html">Introduction</a>
+                    <a class="nav-link" href="docs_installation.html">Installation</a>
+                    <a class="nav-link" href="docs_typography.html">Typography</a>
+                    <a class="nav-link active" href="docs_layout.html">Layout</a>
+                    <a class="nav-link" href="docs_buttons.html">Buttons</a>
+                    <a class="nav-link" href="docs_forms.html">Forms</a>
+                    <a class="nav-link" href="docs_spacing.html">Spacing</a>
+                    <a class="nav-link" href="docs_colors.html">Colors</a>
+                    <a class="nav-link" href="docs_devices.html">Devices</a>
+                    <a class="nav-link" href="docs_effects.html">Effects</a>
+                </nav>
+            </div>
+            <div class="col-10@m">
+                <h1>Layout</h1>
+                
+                <p>Slate uses a 12 column flexbox grid in a series of containers, rows, and columns. Below is an example and an in-depth look at how the layout comes together.</p>
+                
+                <div class="docs-example">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12">
+                            12
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-11">
+                            11
+                            </div>
+                            <div class="col-1">
+                            1
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-10">
+                            10
+                            </div>
+                            <div class="col-2">
+                            2
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-9">
+                            9
+                            </div>
+                            <div class="col-3">
+                            3
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-8">
+                            8
+                            </div>
+                            <div class="col-4">
+                            4
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-7">
+                            7
+                            </div>
+                            <div class="col-5">
+                            5
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-6">
+                            6
+                            </div>
+                            <div class="col-6">
+                            6
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <h2>Auto width</h2>
+
+                <p>A standard .col will provide an automatic width inside a row.</p>
+
+                <div class="docs-example layout-grid-example">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col">
+                                1 of 2
+                            </div>
+                            <div class="col">
+                                2 of 2
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                1 of 3
+                            </div>
+                            <div class="col">
+                                2 of 3
+                            </div>
+                            <div class="col">
+                                3 of 3
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <h2>Devices</h2>
+
+                <p>Breakpoints exist for @xs, @s, @m, @xl and @xxl. Below is a table describing the device sizes and breakpoints.</p>
+
+                <p>Devices can be targeted by appending @device to any of the columns.</p>
+
+                <div class="responsive-table">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th>.col@xs</th>
+                                <th>.col@s</th>
+                                <th>.col@m</th>
+                                <th>.col@l</th>
+                                <th>.col@xl</th>
+                                <th>.col@xxl</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Breakpoint</td>
+                                <td>576px</td>
+                                <td>≥576px</td>
+                                <td>≥768px</td>
+                                <td>≥992px</td>
+                                <td>≥1200px</td>
+                                <td>≥1800px</td>
+                            </tr>
+                            <tr>
+                                <td>Container</td>
+                                <td>None</td>
+                                <td>540px</td>
+                                <td>720px</td>
+                                <td>960px</td>
+                                <td>1140px</td>
+                                <td>1640px</td>
+                            </tr>
+                            <tr>
+                                <td>Gutter</td>
+                                <td colspan="6">var(--space)</td>
+                            </tr>
+                        </thead>
+                    </table>
+                </div>
+                
+                <h3>Stacking</h3>
+
+                <p>Apply .row--stack to switch to a stacked column layout. Use .row--stack@xs to only stack on within the xs breakpoint.</p>
+
+                <div class="docs-example layout-grid-example">
+                    <div class="container">
+                        <div class="row row--stack">
+                            <div class="col">
+                                .row--stack
+                            </div>
+                            <div class="col">
+                                .row--stack
+                            </div>
+                        </div>
+                        <div class="row row--stack@xs">
+                            <div class="col">
+                                .row--stack@xs
+                            </div>
+                            <div class="col">
+                                .row--stack@xs
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <h2>Alignment &amp; Spacing</h2>
+                <p>When fixing columns, spacing classes are aviable to adjust the justification of the content.</p>
+
+                <p>All alignment &amp; spacing can target devices by appending the appropriate @device.</p>
+
+                <h3>Around</h3>
+                <div class="docs-example layout-grid-example">
+                    <div class="container">
+                        <div class="row row--around">
+                            <div class="col-3">
+                                .row--around
+                            </div>
+                            <div class="col-3">
+                                .row--around
+                            </div>
+                            <div class="col-3">
+                                .row--around
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <h3>Between</h3>
+                <div class="docs-example layout-grid-example">
+                    <div class="container">
+                        <div class="row row--between">
+                            <div class="col-3">
+                                .row--between
+                            </div>
+                            <div class="col-3">
+                                .row--between
+                            </div>
+                            <div class="col-3">
+                                .row--between
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <h3>Even</h3>
+                <div class="docs-example layout-grid-example">
+                    <div class="container">
+                        <div class="row row--even">
+                            <div class="col-3">
+                                .row--even
+                            </div>
+                            <div class="col-3">
+                                .row--even
+                            </div>
+                            <div class="col-3">
+                                .row--even
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <h3>Center</h3>
+                <div class="docs-example layout-grid-example">
+                    <div class="container">
+                        <div class="row row--center">
+                            <div class="col-3">
+                                .row--center
+                            </div>
+                            <div class="col-3">
+                                .row--center
+                            </div>
+                            <div class="col-3">
+                                .row--center
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <h2>Alignment</h2>
+
+                <p>Helper classes exist to make align easy. Each alignment class also exists at each device breakpoint, so you can use .row--top or .row-xs-center in combination.</p>
+
+                <h3>Vertical</h3>
+
+                <p>By default a column will fill the height of the row. To control the alignment within the row you can use .top, .middle or .bottom.</p>
+
+                <h4>Top</h4>
+                <div class="docs-example layout-grid-example">
+                    <div class="container">
+                        <div class="row row--top">
+                            <div class="col">
+                                .row--top
+                            </div>
+                            <div class="col">
+                                .row--top
+                            </div>
+                            <div class="col">
+                                .row--top
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <h4>Middle</h4>
+                <div class="docs-example layout-grid-example">
+                    <div class="container my-2">
+                        <div class="row row--middle">
+                            <div class="col">
+                                .row--middle
+                            </div>
+                            <div class="col">
+                                .row--middle
+                            </div>
+                            <div class="col">
+                                .row--middle
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <h4>Bottom</h4>
+                <div class="docs-example layout-grid-example">
+                    <div class="container my-2">
+                        <div class="row row--bottom">
+                            <div class="col">
+                                .row--bottom
+                            </div>
+                            <div class="col">
+                                .row--bottom
+                            </div>
+                            <div class="col">
+                                .row--bottom
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <h3>Horizontal</h3>
+
+                <p>By default a column will fill the height of the row. To control the alignment within the row you can use .top, .middle or .bottom.</p>
+
+                <div class="docs-example layout-grid-example">
+                    <div class="container my-2">
+                        <div class="row row--start">
+                            <div class="col-3">
+                                .row--start
+                            </div>
+                        </div>
+                        <div class="row row--center">
+                            <div class="col-3">
+                                .row--center
+                            </div>
+                        </div>
+                        <div class="row row--end">
+                            <div class="col-3">
+                                .row--end
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <h2>Reverse</h2>
+
+                <p>Reverse will adjust flex-direction from either row-reverse with .row--reverse or column reverse with .col--reverse.</p>
+                
+                <h3>Row</h3>
+                <div class="docs-example layout-grid-example">
+                    <div class="container">
+                        <div class="row row--reverse">
+                            <div class="col">
+                                #1 .row--reverse
+                            </div>
+                            <div class="col">
+                                #2 .row--reverse
+                            </div>
+                            <div class="col">
+                                #3 .row--reverse
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <h3>Stack Reverse</h3>
+                <div class="docs-example layout-grid-example">
+                    <div class="container">
+                        <div class="row row--stack-reverse">
+                            <div class="col">
+                                #1 .row--stack-reverse
+                            </div>
+                            <div class="col">
+                                #2 .row--stack-reverse
+                            </div>
+                            <div class="col">
+                                #3 .row--stack-reverse
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <h2>Order</h2>
+
+                <h3>First</h3>
+
+                <div class="docs-example layout-grid-example">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-4 col--last">
+                                #1 .col--last
+                            </div>
+                            <div class="col-4">
+                                #2
+                            </div>
+                            <div class="col-4 col--first">
+                                #3 .col--first
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

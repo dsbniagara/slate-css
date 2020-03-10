@@ -2,6 +2,9 @@
 @import './variables.css';
 
 @slate base;
+@slate components/nav;
+@slate components/badge;
+
 h1,h2,h3,h4,h5,h6 {
     font-weight: bold;
 }
@@ -12,6 +15,7 @@ body > header.container {
     border-bottom: 1px solid var(--color-gray-lighter);
     padding: var(--space);
     z-index: 99;
+    margin-bottom: calc(2 * var(--space));
 
     .brand {
         color: var(--color-text);
@@ -36,12 +40,19 @@ body > .page .page-nav {
     margin: 0 calc(-1*var(--space));
     .nav-link {
         color: var(--color-text);
+        &.active {
+            color: var(--color-primary);
+        }
+    }
+}
+body > .page {
+    h2,h3,h4 {
+        margin-top: var(--space);
     }
 }
 
 section.hero {
     z-index: 1;
-    overflow: hidden;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -51,7 +62,7 @@ section.hero {
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60' viewBox='0 0 60 60'%3E%3Ccircle cx='1' cy='1' r='1' fill='%2375818a' fill-opacity='1'%3E%3C/circle%3E%3C/svg%3E");
 
     h1 {
-        font-size: var(--font-size-xxl);
+        font-size: 5rem;
         b {
             position: relative;
             &:after {
@@ -151,7 +162,6 @@ section.hero {
             }
         }
     }
-    
 }
 
 
@@ -174,8 +184,124 @@ section.pitch-deck {
 }
 
 pre.code {
-    padding: var(--space-2);
+    padding: calc(2*var(--space));
     background: var(--color-gray-lighter);
     border-radius: var(--border-radius);
-    margin: var(--space-2) 0;
+    margin: calc(2*var(--space)) 0;
+    overflow: auto;
+}
+
+.docs-example {
+    &.layout-grid-example {
+        .row {
+            background-color: var(--color-primary-a-10);
+            min-height: 100px;
+            border-radius: 4px;
+        }
+    }
+    .row .col,
+    .row [class^=col-] {
+        padding-top: .75rem;
+        padding-bottom: .75rem;
+        background-color: var(--color-primary-a-10);
+        border: 1px solid var(--color-primary-a-30);
+        border-radius: 4px;
+    }
+}
+
+.color-display {
+    border-radius: var(--space-s);
+    padding: 0 var(--space-s);
+    margin: var(--space-s) 0;
+    display: flex;
+    align-items: flex-end;
+    transition: ease 400ms all;
+    height: 40px;
+    line-height: 40px;
+    &:hover {
+        height: 200px;
+    }
+}
+.color-display--main {
+    min-height: 200px;
+}
+
+.outline {
+    border: 2px solid var(--color-primary);
+}
+
+@define-mixin colora $name {
+    .docs-bg--$(name)-a-10 { background-color: var( --color-$(name)-a-10 ); }
+    .docs-bg--$(name)-a-20 { background-color: var( --color-$(name)-a-20 ); }
+    .docs-bg--$(name)-a-30 { background-color: var( --color-$(name)-a-30 ); }
+    .docs-bg--$(name)-a-40 { background-color: var( --color-$(name)-a-40 ); }
+    .docs-bg--$(name)-a-50 { background-color: var( --color-$(name)-a-50 ); }
+    .docs-bg--$(name)-a-60 { background-color: var( --color-$(name)-a-60 ); }
+    .docs-bg--$(name)-a-70 { background-color: var( --color-$(name)-a-70 ); }
+    .docs-bg--$(name)-a-80 { background-color: var( --color-$(name)-a-80 ); }
+    .docs-bg--$(name)-a-90 { background-color: var( --color-$(name)-a-90 ); }
+}
+
+@mixin colora primary {}
+@mixin colora accent {}
+@mixin colora gray {}
+@mixin colora danger {}
+
+
+.docs-not-only-demo {
+    div[class^="not"] {
+        border-radius: var(--space-s);
+        padding: var(--space-s);
+        border: 2px solid var(--color-primary);
+        margin-bottom: var(--space);
+    }
+    div[class^="only"] {
+        border-radius: var(--space-s);
+        padding: var(--space-s);
+        border: 2px solid var(--color-accent);
+        margin-bottom: var(--space-s);
+    }
+}
+
+.docs-block-flex-demo {
+    .block {
+        border-radius: var(--space-s);
+        padding: var(--space);
+        border: 2px solid var(--color-primary);
+        margin-bottom: var(--space);
+    }
+}
+
+.docs-device-preview {
+
+    div[class^="device"] {
+        border-radius: var(--space-s);
+        border: 2px solid var(--color-primary);
+        color: var(--color-primary);
+        text-align: right;
+        margin-left: -2px;
+        margin-bottom: -2px;
+        padding: var(--space) var(--space) 0 0;
+    }
+    .device-xs {
+        width: var(--device-xs);
+        height: 300px;
+    }
+    .device-s {
+        width: var(--device-s);
+    }
+    .device-m {
+        width: var(--device-m);
+    }
+    .device-l{
+        width: var(--device-l);
+    }
+    .device-xl{
+        width: var(--device-xl);
+    }
+    .device-xxl{
+        width: 2200px;
+        margin-left: 0;
+        margin-bottom: 0;
+    }
 }

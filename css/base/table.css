@@ -1,5 +1,10 @@
-    .table {
+.responsive-table {
+    overflow-x:auto;
     width: 100%;
+}
+.table {
+    width: 100%;
+    overflow: auto;
     th,td {
         padding: 10px;
     }

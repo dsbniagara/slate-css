@@ -1,41 +1,86 @@
-html {
+:root {
+    --text-base: 11pt;
+    
+    --text-scale-ratio: 1.2;
+    --text-xs: calc((var(--text-base) / var(--text-scale-ratio)) / var(--text-scale-ratio));
+    --text-s: calc(var(--text-xs) * var(--text-scale-ratio));
+    --text-m: calc(var(--text-s) * var(--text-scale-ratio) * var(--text-scale-ratio));
+    --text-l: calc(var(--text-m) * var(--text-scale-ratio));
+    --text-xl: calc(var(--text-l) * var(--text-scale-ratio));
+    --text-xxl: calc(var(--text-xl) * var(--text-scale-ratio));
+    --text-xxxl: calc(var(--text-xxl) * var(--text-scale-ratio));
+
+    --text-h1: 3rem;
+    --text-h2: 2em;
+    --text-h3: 1.8em;
+    --text-h4: 1.3em;
+    --text-h5: 1.2em;
+    --text-h6: 1.1em;
+
+    --font-primary: apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    --font-accent: apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-size-adjust: 100%;
     text-rendering: optimizeLegibility;
-    font-family: var(--font-family-sans-serif);
-    font-size: var(--font-size);
-}
-body {
+    font-family: var(--font-primary);
+    font-size: var(--text-base);
     color: var(--color-text);
     line-height: 1.5;
 }
 h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4,.h5,.h6 {
-    font-family: var(--font-family-heading);
-    color: var(--color-text-heading);
+    font-family: var(--font-primary);
+    color: var(--color-text);
     margin-bottom: .75rem;
-    font-family: inherit;
     font-weight: 500;
     line-height: 1.2;
 }
-h1,.h1,.text-xl {
-    font-size: var(--font-h1-size);
+h1,.h1 {
+    font-size: var(--text-h1);
 }
-h2,.h2,.text-l {
-    font-size: var(--font-h2-size);
+h2,.h2 {
+    font-size: var(--text-h2);
 }
-h3,.h3,.text-m {
-    font-size: var(--font-h3-size);
+h3,.h3 {
+    font-size: var(--text-h3);
 }
 h4,.h4 {
-    font-size: var(--font-h4-size);
+    font-size: var(--text-h4);
 }
 h5,.h5 {
-    font-size: var(--font-h5-size);
+    font-size: var(--text-h5);
 }
 h6,.h6 {
-    font-size: var(--font-h6-size);
+    font-size: var(--text-h6);
 }
+.text-base {
+    font-size: var(--text-base);
+}
+.text-xs {
+    font-size: var(--text-xs);
+}
+.text-s {
+    font-size: var(--text-s);
+}
+.text-m {
+    font-size: var(--text-m);
+}
+.text-l {
+    font-size: var(--text-l);
+}
+.text-xl {
+    font-size: var(--text-xl);
+}
+.text-xxl {
+    font-size: var(--text-xxl);
+}
+.text-xxxl {
+    font-size: var(--text-xxxl);
+}
+
 p {
     margin-top: 0;
     margin-bottom: 1rem;
@@ -59,7 +104,6 @@ small,.small {
 mark,.mark {
     background-color: #ffffca;
 }
-
 dl, ol, ul {
     margin-top: 0;
     margin-bottom: 1rem;
@@ -67,10 +111,9 @@ dl, ol, ul {
 ol ol, ol ul, ul ol, ul ul {
     margin-bottom: 0;
 }
-
 .text-empty {
     font-style: italic;
-    color: rgba(0,0,0,0.5);
+    color: rgba(0,0,0,.5);
 }
 .text-center {
     text-align: center;

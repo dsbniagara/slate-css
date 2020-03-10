@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Devices - Slate</title>
+    <link rel="stylesheet" href="./css/docs.css" />
+</head>
+<body data-theme="docs">
+    <header class="container">
+        <a class="brand" href="index.html">slate</a>
+        <span class="badge badge--primary">0.1.0</span>
+        <nav class="nav">
+            <div class="nav-item"><a href="docs.html" class="nav-link">Docs</a></div>
+            <div class="nav-item"><a href="docs.html" class="nav-link">Components</a></div>
+            <div class="nav-item"><a href="docs.html" class="nav-link">Globals</a></div>
+        </nav>
+    </header>
+    <section class="page container ">
+        <div class="row">
+            <div class="col-2">
+                <nav class="page-nav nav nav--stacked">
+                    <a class="nav-link" href="docs.html">Introduction</a>
+                    <a class="nav-link" href="docs_installation.html">Installation</a>
+                    <a class="nav-link" href="docs_typography.html">Typography</a>
+                    <a class="nav-link" href="docs_layout.html">Layout</a>
+                    <a class="nav-link" href="docs_buttons.html">Buttons</a>
+                    <a class="nav-link" href="docs_forms.html">Forms</a>
+                    <a class="nav-link" href="docs_spacing.html">Spacing</a>
+                    <a class="nav-link" href="docs_colors.html">Colors</a>
+                    <a class="nav-link active" href="docs_devices.html">Devices</a>
+                    <a class="nav-link" href="docs_effects.html">Effects</a>
+                </nav>
+            </div>
+            <div class="col-10">
+                <h1>Devices</h1>
+                
+                <p>Slate provides a set of common device sizes from @xs to @xxl.</p>
+                <div class="docs-device-preview">
+                    <div class="device-xxl">
+                        <b>@xxl</b>
+                        Infinity
+                        <div class="device-xl">
+                            <b>@xl</b>
+                            1800px
+                            <div class="device-l">
+                                <b>@l</b>
+                                1200px
+                                <div class="device-m">
+                                    <b>@m</b>
+                                    992px
+                                    <div class="device-s">
+                                        <b>@s</b>
+                                        768px
+                                        <div class="device-xs">
+                                            <b>@xs</b>
+                                            576px
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <h2>Visibility</h2>
+
+                <p>Use only@device or not@device to target one device size. The elements below will demonstrate device targeting with each class.</p>
+
+                <div class="row docs-not-only-demo">
+                    <div class="col">
+                        <div class="only@xs">
+                            only@xs
+                        </div>
+                        <div class="not@xs">
+                            not@xs
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="only@s">
+                            only@s
+                        </div>
+                        <div class="not@s">
+                            not@s
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="only@m">
+                            only@m
+                        </div>
+                        <div class="not@m">
+                            not@m
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="only@l">
+                            only@l
+                        </div>
+                        <div class="not@l">
+                            not@l
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="only@xl">
+                            only@xl
+                        </div>
+                        <div class="not@xl">
+                            not@xl
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="only@xxl">
+                            only@xxl
+                        </div>
+                        <div class="not@xxl">
+                            not@xxl
+                        </div>
+                    </div>
+                </div>
+
+                <p>To target a <b>device or greater</b> use {block|flex}@device to toggle the display property at the desired device level. Using block@m will set the display to block at the medium breakpoint and greater.</p>
+                
+                <div class="row docs-block-flex-demo">
+                    <div class="col block@xs">
+                        <div class="block">
+                            block@xs or flex@xs
+                        </div>
+                    </div>
+                    <div class="col block@s">
+                        <div class="block">
+                            block@s or flex@s
+                        </div>
+                    </div>
+                    <div class="col block@m">
+                        <div class="block">
+                            block@m or flex@m
+                        </div>
+                    </div>
+                    <div class="col block@l">
+                        <div class="block">
+                            block@l or flex@l
+                        </div>
+                    </div>
+                    <div class="col block@xl">
+                        <div class="block">
+                            block@xl or flex@xl
+                        </div>
+                    </div>
+                    <div class="col block@xxl">
+                        <div class="block">
+                            block@xxl or flex@xxl
+                        </div>
+                    </div>
+                </div>
+                
+                <h2>Modify Devices</h2>
+
+                <p>CSS Variables cannot modify media queries. To change the device sizes you must create a <code>slate.config.js</code> file and redefine the devices.</p>
+
+                <pre class="code">module.exports = {
+
+    'device-xs': '576px',
+    'device-s': '768px',
+    'device-m': '992px',
+    'device-l': '1200px',
+    'device-xl': '1800px',
+    'device-xxl': 'auto'
+    
+}</pre>
+                <p>CSS Variables are provided for each device if you would like to use them within your other css properties.</p>
+
+                <pre class="code">:root {
+    --device-xs: 576px;
+    --device-s: 768px;
+    --device-m: 992px;
+    --device-l: 1200px;
+    --device-xl: 1800px;
+    --device-xxl: auto;
+}</pre>
+                
+
+            </div>
+        </div>
+    </section>
+</body>
+</html>

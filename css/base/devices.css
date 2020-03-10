@@ -1,0 +1,66 @@
+:root {
+    --device-xs: $device-xs;
+    --device-s: $device-s;
+    --device-m: $device-m;
+    --device-l: $device-l;
+    --device-xl: $device-xl;
+    --device-xxl: $device-xxl;
+}
+
+.block\@s,
+.flex\@s,
+.block\@m,
+.flex\@m,
+.block\@l,
+.flex\@l,
+.block\@xl,
+.flex\@xl,
+.block\@xxl,
+.flex\@xxl,
+.only\@s,
+.only\@m,
+.only\@l,
+.only\@xl,
+.only\@xxl { display: none; }
+
+@media only screen and (min-width: $device-xs) {
+    .only\@xs { display: none !important; }
+    .block\@s { display: block; }
+    .flex\@s { display: flex; }
+}
+@media only screen and (min-width: $device-xs) and (max-width: $device-s) {
+    .only\@s { display: block !important; }
+    .not\@s { display: none !important; }
+}
+@media only screen and (min-width: $device-s) and (max-width: $device-m) {
+    .only\@m { display: block !important; }
+    .not\@m { display: none !important; }
+}
+@media only screen and (min-width: $device-m) and (max-width: $device-l) {
+    .only\@l { display: block !important; }
+    .not\@l { display: none !important; }
+}
+@media only screen and (min-width: $device-l) and (max-width: $device-xl) {
+    .only\@xl { display: block !important; }
+    .not\@xl { display: none !important; }
+}
+@media only screen and (min-width: $device-xl) {
+    .only\@xxl { display: block !important; }
+    .not\@xxl { display: none !important; }
+}
+@media only screen and (min-width: $device-s) {
+    .block\@m { display: block; }
+    .flex\@m { display: flex; }
+}
+@media only screen and (min-width: $device-m) {
+    .block\@l { display: block; }
+    .flex\@l { display: flex; }
+}
+@media only screen and (min-width: $device-l) {
+    .block\@xl { display: block; }
+    .flex\@xl { display: flex; }
+}
+@media only screen and (min-width: $device-xl) {
+    .block\@xxl { display: block; }
+    .flex\@xxl { display: flex; }
+}

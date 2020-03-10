@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Installation - Slate</title>
+    <title>Document</title>
     <link rel="stylesheet" href="./css/docs.css" />
 </head>
-<body data-theme="docs">
+<body>
     <header class="container">
         <a class="brand" href="index.html">slate</a>
         <span class="badge badge--primary">0.1.0</span>
@@ -16,15 +16,14 @@
             <div class="nav-item"><a href="docs.html" class="nav-link">Globals</a></div>
         </nav>
     </header>
-    <section class="page container">
+    <section class="page container pt-3">
         <div class="row">
-            <div class="col-2">
+            <div class="col-md-2">
                 <nav class="page-nav nav nav--stacked">
                     <a class="nav-link" href="docs.html">Introduction</a>
-                    <a class="nav-link active" href="docs_installation.html">Installation</a>
+                    <a class="nav-link" class="active" href="docs_installation.html">Installation</a>
                     <a class="nav-link" href="docs_typography.html">Typography</a>
                     <a class="nav-link" href="docs_layout.html">Layout</a>
-                    <a class="nav-link" href="docs_buttons.html">Buttons</a>
                     <a class="nav-link" href="docs_forms.html">Forms</a>
                     <a class="nav-link" href="docs_spacing.html">Spacing</a>
                     <a class="nav-link" href="docs_colors.html">Colors</a>
@@ -32,7 +31,7 @@
                     <a class="nav-link" href="docs_effects.html">Effects</a>
                 </nav>
             </div>
-            <div class="col-m-10">
+            <div class="col-md-9">
                 <h1>Installation</h1>
                 
                 <p>To install slate, start with installing from our npm package along with a few post-css dependancies.</p>
@@ -40,12 +39,13 @@
 <pre class="code">npm i -s @dsbn/slate-css postcss-nested postcss-for</pre>
 
                 <p>The next step is to configure your postcss setup. There are many different options for this but a simple setup is with a new slate.config.js file:</p>
-                
+
 <pre class="code">module.exports = {
     plugins: [
       // ...
       require('@dsbn/slate-css'),
-      Todo: get updated this
+      require('postcss-nested'),
+      require('postcss-for'),
       // ...
     ]
 }</pre>

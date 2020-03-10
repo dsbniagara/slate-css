@@ -1,10 +1,7 @@
 var gulp = require("gulp");
 var postcss = require("gulp-postcss");
 var partialImport = require("postcss-partial-import");
-var cssnext = require("postcss-cssnext");
 var slatecss = require('./src/postcss');
-var nested = require('postcss-nested');
-var colorFunc = require('postcss-color-function');
 var cleanCSS = require('gulp-clean-css');
 var rename = require('gulp-rename');
 
@@ -12,8 +9,10 @@ gulp.task("css:build", function() {
     var processors = [
         partialImport(),
         slatecss(),
-        nested(),
-        colorFunc(),
+        require('postcss-mixins'),
+        require('postcss-nested'),
+        require('postcss-color-function'),
+        require('postcss-for')
         // cssnext({
         //     browsers: ["> 1%"],
         // })

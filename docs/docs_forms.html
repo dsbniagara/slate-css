@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms - Slate</title>
+    <link rel="stylesheet" href="./css/docs.css" />
+</head>
+
+<body data-theme="docs">
+    <header class="container">
+        <a class="brand" href="index.html">slate</a>
+        <span class="badge badge--primary">0.1.0</span>
+        <nav class="nav">
+            <div class="nav-item"><a href="docs.html" class="nav-link">Docs</a></div>
+            <div class="nav-item"><a href="docs.html" class="nav-link">Components</a></div>
+            <div class="nav-item"><a href="docs.html" class="nav-link">Globals</a></div>
+        </nav>
+    </header>
+    <section class="page container">
+        <div class="row">
+            <div class="col-m-2">
+                <nav class="page-nav nav nav--stacked">
+                    <a class="nav-link" href="docs.html">Introduction</a>
+                    <a class="nav-link" href="docs_installation.html">Installation</a>
+                    <a class="nav-link" href="docs_typography.html">Typography</a>
+                    <a class="nav-link" href="docs_layout.html">Layout</a>
+                    <a class="nav-link" href="docs_buttons.html">Buttons</a>
+                    <a class="nav-link active" href="docs_forms.html">Forms</a>
+                    <a class="nav-link" href="docs_spacing.html">Spacing</a>
+                    <a class="nav-link" href="docs_colors.html">Colors</a>
+                    <a class="nav-link" href="docs_devices.html">Devices</a>
+                    <a class="nav-link" href="docs_effects.html">Effects</a>
+                </nav>
+            </div>
+            <div class="col-m-10">
+                <h1>Forms</h1>
+                <p>Form elements are defined in base/form.css can be styled by adding form-input to your desired element.</p>
+
+                <pre class="code">:root {
+    --input-radius: 0.25em;
+    --input-border: 1px solid var(--color-gray-light);
+    --input-border-hover: 1px solid  var(--color-gray);
+    --input-border-active: 1px solid var(--color-primary);
+    --input-shadow: 0 1px 1px #0000000f;
+    --input-shadow-hover: none;
+    --input-shadow-active: 0px 0px 0px 3px var(--color-primary-a-10), 0px 1px 4px 1px var(--color-primary-a-20);
+}</pre>
+
+                <div class="form-field">
+                    <label for="name">Your name</label> 
+                    <input id="name" type="text" name="name" placeholder="John Smith" class="form-input">
+                </div>
+
+                <div class="form-field">
+                    <label for="select">Select a value</label> 
+                    <select id="select" class="form-input">
+                        <option>Option 1</option>
+                        <option>Option 2</option>
+                    </select>
+                </div>
+
+                <div class="form-field"><label><input type="checkbox" class="form-switch"> Switch</label></div>
+
+                <div class="form-field">
+                    <label for="check1">
+                        <input id="check1" type="checkbox" class="form-input">
+                        Check one
+                    </label> 
+                    <label for="check2">
+                        <input id="check2" type="checkbox" class="form-input"> 
+                        Check two
+                    </label>
+                </div>
+
+                <div class="form-field">
+                    <label for="radio1">
+                        <input id="radio1" name="radio" value="1" type="radio" class="form-input"> 
+                        Radio 1
+                    </label>
+                    <label for="radio2">
+                        <input id="radio2" name="radio" value="1" type="radio" class="form-input"> Radio 2
+                    </label>
+                </div>
+                
+                <p>
+                    <button type="button" class="btn btn--primary">Submit</button> 
+                    <button type="button" class="btn">Cancel</button>
+                </p>
+                
+    </section>
+</body>
+
+</html>

@@ -1,11 +1,22 @@
+:root {
+    --input-radius: 0.25em;
+
+    --input-border: 1px solid var(--color-gray-light);
+    --input-border-hover: 1px solid  var(--color-gray);
+    --input-border-active: 1px solid var(--color-primary);
+
+    --input-shadow: 0 1px 1px #0000000f;
+    --input-shadow-hover: none;
+    --input-shadow-active: 0px 0px 0px 3px var(--color-primary-a-10), 0px 1px 4px 1px var(--color-primary-a-20);
+}
 ::placeholder {
-    color: var(--color-light);
+    color: var(--color-gray);
 }
 :-ms-input-placeholder {
-    color: var(--color-light);
+    color: var(--color-gray);
 }
 ::-ms-input-placeholder {
-    color: var(--color-light);
+    color: var(--color-gray);
 }
 
 .form-input,
@@ -18,21 +29,17 @@ div.form-input > input {
     background: #fff;
     font-family: var(--font-family-sans-serif);
     color: var(--color-text);
-    border-radius: var(--border-radius-input);
-    border: var(--border-input);
+    border-radius: var(--input-radius);
+    border: var(--input-border);
+
     &--hover,&:hover {
-        border: var(--border-input-hover);
-        box-shadow: var(--box-shadow-input-hover);
+        border: var(--input-border-hover);
+        box-shadow: var(--input-shadow-hover);
     }
     &--focus,&:focus {
         outline: 0 none;
-        border: var(--border-input-active);
-        box-shadow: var(--box-shadow-input-active);
-    }
-
-    &--slightly-dark {
-        background: #f2f2f2;
-        border: 1px solid transparent;
+        border: var(--input-border-active);
+        box-shadow: var(--input-shadow-active);
     }
 }
 select.form-input {
@@ -53,7 +60,7 @@ input:not([type=checkbox]):not([type=radio]).form-input {
     padding: .6rem 1rem;
     width: 100%;
     line-height: 1.3;
-    &--large {
+    &--l {
         padding: 1em 1.4em;
         font-size: 1.1em;
     }
@@ -156,7 +163,7 @@ input[type=radio].form-input {
     }
     &--focus:after,&:focus:after {
         border: 1px solid var(--color-primary);
-        box-shadow: var(--box-shadow-input-active);
+        box-shadow: var(--input-shadow-active);
     }
 
     &--large {

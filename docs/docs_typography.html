@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Typography - Slate</title>
+    <link rel="stylesheet" href="./css/docs.css" />
+</head>
+<body data-theme="docs">
+    <header class="container">
+        <a class="brand" href="index.html">slate</a>
+        <span class="badge badge--primary">0.1.0</span>
+        <nav class="nav">
+            <div class="nav-item"><a href="docs.html" class="nav-link">Docs</a></div>
+            <div class="nav-item"><a href="docs.html" class="nav-link">Components</a></div>
+            <div class="nav-item"><a href="docs.html" class="nav-link">Globals</a></div>
+        </nav>
+    </header>
+    <section class="page container">
+        <div class="row">
+            <div class="col-2">
+                <nav class="page-nav nav nav--stacked">
+                    <a class="nav-link" href="docs.html">Introduction</a>
+                    <a class="nav-link" href="docs_installation.html">Installation</a>
+                    <a class="nav-link active" href="docs_typography.html">Typography</a>
+                    <a class="nav-link" href="docs_layout.html">Layout</a>
+                    <a class="nav-link" href="docs_buttons.html">Buttons</a>
+                    <a class="nav-link" href="docs_forms.html">Forms</a>
+                    <a class="nav-link" href="docs_spacing.html">Spacing</a>
+                    <a class="nav-link" href="docs_colors.html">Colors</a>
+                    <a class="nav-link" href="docs_devices.html">Devices</a>
+                    <a class="nav-link" href="docs_effects.html">Effects</a>
+                </nav>
+            </div>
+            <div class="col-m-10">
+                <h1>Typography</h1>
+
+                <p>All type settings are located in the <code>base/typography.css</code> file. This includes all css selectors and variable declarations associated with typography.</p>
+
+                <h2>Family</h2>
+
+                <p>The primary font uses pre-installed system fonts that can be found on a wide range of devices. The font is wrapped in the <code>--font-primary</code> variable is applied to all headings the body.</p>
+
+                <pre class="code">:root {
+    --font-primary: '-apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"';
+}</pre>
+
+                <h2>Scale</h2>
+
+                <p>The type scale works of the --text-base size, then uses a scale ratio to provide sizing from xs to xxxl. You can easily customize this ratio at certain break points or on certain components to consistenly scale text.</p>
+
+                <pre class="code">:root {
+    --text-base: 11pt;
+
+    --text-scale-ratio: 1.2;
+    --text-xs: calc((var(--text-base) / var(--text-scale-ratio)) / var(--text-scale-ratio));
+    --text-s: calc(var(--text-xs) * var(--text-scale-ratio));
+    --text-m: calc(var(--text-s) * var(--text-scale-ratio) * var(--text-scale-ratio));
+    --text-l: calc(var(--text-m) * var(--text-scale-ratio));
+    --text-xl: calc(var(--text-l) * var(--text-scale-ratio));
+    --text-xxl: calc(var(--text-xl) * var(--text-scale-ratio));
+    --text-xxxl: calc(var(--text-xxl) * var(--text-scale-ratio));
+
+    --text-h1: 3rem;
+    --text-h2: 2em;
+    --text-h3: 1.8em;
+    --text-h4: 1.3em;
+    --text-h5: 1.2em;
+    --text-h6: 1.1em;
+}</pre>
+            <h2>Heading sizes</h2>
+
+            <p>All headings are styled along with .h1 to .h6 classes that match each size.</p>
+
+            <h1>Heading 1</h1>
+            <h2>Heading 2</h2>
+            <h3>Heading 3</h3>
+            <h4>Heading 4</h4>
+            <h5>Heading 5</h5>
+            <h6>Heading 6</h6>
+
+            <h2>Text sizes</h2>
+
+            <p>Text size classes are available via the text-* pattern from xs to xxxl.</p>
+
+            <div class="text-xs">.text-xs</div>
+            <div class="text-s">.text-s</div>
+            <div class="text-base">Normal text or .text-base</div>
+            <div class="text-m">.text-m</div>
+            <div class="text-l">.text-l</div>
+            <div class="text-xl">.text-xl</div>
+            <div class="text-xxl">.text-xxl</div>
+            <div class="text-xxxl">.text-xxxl</div>
+
+            </div>
+        </div>
+    </section>
+</body>
+</html>

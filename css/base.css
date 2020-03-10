@@ -1,20 +1,10 @@
 @import 'base/reset.css';
 @import 'base/color.css';
-@import 'base/flex.css';
 @import 'base/layout.css';
 @import 'base/spacing.css';
 @import 'base/visibility.css';
-
 @import 'base/typography.css';
 @import 'base/form.css';
 @import 'base/buttons.css';
-
 @import 'base/table.css';
-@import 'components/list.css';
-@import 'components/breadcrumb.css';
-@import 'components/badge.css';
-@import 'components/panel.css';
-@import 'components/nav.css';
-@import 'components/svg.css';
-
-@import 'effects/aria-busy.css';
+@import 'base/devices.css';
