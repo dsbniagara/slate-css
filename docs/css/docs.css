@@ -335,6 +335,7 @@ pre.code {
 
 .demo-frame-toolbar {
     display: flex;
+    align-items: center;
     justify-content: space-between;
     width: 100%;
     padding: var(--space-xs);
@@ -353,21 +354,22 @@ pre.code {
         }
     }
 }
-.demo-wrap {
-    display: flex;
-    overflow-x: auto;
+.demo-frame {
     width: 100%;
+    height: 400px;
+    white-space: nowrap;
+    overflow-x: auto;
     border-radius: var(--space-xs);
     background: var(--color-gray-light);
     border: 1px solid var(--color-gray-lighter); 
-}
-.demo-frame {
-    display: inline-flex;
     iframe {
-        height: 300px;
+        height: 100%;
+        float: left;
+        display: flex;
     }
     .demo-frame-handle {
-        display: flex;
+        height: 100%;
+        display: inline-flex;
         align-items: center;
         background: var(--color-gray);
         width: 20px;

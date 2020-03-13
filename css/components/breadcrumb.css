@@ -1,7 +1,7 @@
 .breadcrumb {
     a {
         display: inline-block;
-        color: var(--color-gray-light);
+        color: var(--color-gray);
         &:hover {
             color: var(--color-primary);
         }
