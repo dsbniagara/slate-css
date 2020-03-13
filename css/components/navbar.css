@@ -1,0 +1,25 @@
+.navbar {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    border-bottom: 1px solid var(--color-gray-lighter);
+    padding: var(--space);
+    z-index: 99;
+    margin-bottom: var(--space);
+    .icon {
+        svg, img {
+            display: block;
+        }
+    }
+    .brand {
+        color: var(--text-base);
+        font-size: var(--text-l);
+        font-weight: bold;
+        margin: 0 var(--space);
+    }
+    nav[class^="nav"].active {
+        width: 100%;
+        margin-top: var(--space);
+    }
+}

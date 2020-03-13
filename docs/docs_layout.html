@@ -5,31 +5,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Layout - Slate</title>
     <link rel="stylesheet" href="./css/docs.css" />
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.js" defer></script>
 </head>
 <body data-theme="docs">
-    <header class="container">
+    <header class="container row" x-data="{ show: false }">
         <a class="brand" href="index.html">slate</a>
         <span class="badge badge--primary">0.1.0</span>
-        <nav class="nav">
-            <div class="nav-item"><a href="docs.html" class="nav-link">Docs</a></div>
-            <div class="nav-item"><a href="docs.html" class="nav-link">Components</a></div>
-            <div class="nav-item"><a href="docs.html" class="nav-link">Globals</a></div>
+        <nav class="nav nav@xs" :class="{ 'active': show }">
+            <ul class="nav-items">
+                <li class="nav-item"><a class="nav-link" href="docs.html">Docs</a></li>
+                <li class="nav-item"><a class="nav-link" href="components.html" >Components</a></li>
+                <li class="nav-item"><a class="nav-link" href="docs.html" >Globals</a></li>
+            </ul>
         </nav>
+        <button class="nav-toggle@xs ml-auto" :class="{ 'active': show }" type="button" @click="show = !show"><svg fill="none" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg></button>
     </header>
     <section class="page container">
         <div class="row">
-            <div class="col-2">
-                <nav class="page-nav nav nav--stacked">
-                    <a class="nav-link" href="docs.html">Introduction</a>
-                    <a class="nav-link" href="docs_installation.html">Installation</a>
-                    <a class="nav-link" href="docs_typography.html">Typography</a>
-                    <a class="nav-link active" href="docs_layout.html">Layout</a>
-                    <a class="nav-link" href="docs_buttons.html">Buttons</a>
-                    <a class="nav-link" href="docs_forms.html">Forms</a>
-                    <a class="nav-link" href="docs_spacing.html">Spacing</a>
-                    <a class="nav-link" href="docs_colors.html">Colors</a>
-                    <a class="nav-link" href="docs_devices.html">Devices</a>
-                    <a class="nav-link" href="docs_effects.html">Effects</a>
+            <div class="col" x-data="{ show: false }">
+                <button class="nav-toggle@s ml-auto" :class="{ 'active': show }" type="button" @click="show = !show"><svg fill="none" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg></button>
+                <nav class="page-nav nav@s nav--stacked" :class="{ 'active': show }">
+                    <ul class="nav-items">
+                        <li class="nav-item"><a class="nav-link active" href="docs.html">Introduction</a></li>
+                        <li class="nav-item"><a class="nav-link" href="docs_installation.html">Installation</a></li>
+                        <li class="nav-item"><a class="nav-link" href="docs_typography.html">Typography</a></li>
+                        <li class="nav-item"><a class="nav-link" href="docs_layout.html">Layout</a></li>
+                        <li class="nav-item"><a class="nav-link" href="docs_buttons.html">Buttons</a></li>
+                        <li class="nav-item"><a class="nav-link" href="docs_forms.html">Forms</a></li>
+                        <li class="nav-item"><a class="nav-link" href="docs_table.html">Table</a></li>
+                        <li class="nav-item"><a class="nav-link" href="docs_spacing.html">Spacing</a></li>
+                        <li class="nav-item"><a class="nav-link" href="docs_colors.html">Colors</a></li>
+                        <li class="nav-item"><a class="nav-link" href="docs_devices.html">Devices</a></li>
+                        <li class="nav-item"><a class="nav-link" href="docs_utility.html">Utility</a></li>
+                        <li class="nav-item"><a class="nav-link" href="docs_reset.html">Reset</a></li>
+                    </ul>
                 </nav>
             </div>
             <div class="col-10@m">
@@ -171,46 +180,45 @@
                 
                 <h3>Stacking</h3>
 
-                <p>Apply .row--stack to switch to a stacked column layout. Use .row--stack@xs to only stack on within the xs breakpoint.</p>
+                <p>Combine with <a href="docs_utility.html#flex">flex utility</a> classes to change the layout type to column.</p>
 
                 <div class="docs-example layout-grid-example">
                     <div class="container">
-                        <div class="row row--stack">
+                        <div class="row flex-col">
                             <div class="col">
-                                .row--stack
+                                .flex-col
                             </div>
                             <div class="col">
-                                .row--stack
+                                .flex-col
                             </div>
                         </div>
-                        <div class="row row--stack@xs">
+                        <div class="row flex-col@xs">
                             <div class="col">
-                                .row--stack@xs
+                                .flex-col@xs
                             </div>
                             <div class="col">
-                                .row--stack@xs
+                                .flex-col@xs
                             </div>
                         </div>
                     </div>
                 </div>
 
                 <h2>Alignment &amp; Spacing</h2>
-                <p>When fixing columns, spacing classes are aviable to adjust the justification of the content.</p>
 
                 <p>All alignment &amp; spacing can target devices by appending the appropriate @device.</p>
 
                 <h3>Around</h3>
                 <div class="docs-example layout-grid-example">
                     <div class="container">
-                        <div class="row row--around">
+                        <div class="row flex-just-around">
                             <div class="col-3">
-                                .row--around
+                                .flex-just-around
                             </div>
                             <div class="col-3">
-                                .row--around
+                                .flex-just-around
                             </div>
                             <div class="col-3">
-                                .row--around
+                                .flex-just-around
                             </div>
                         </div>
                     </div>
@@ -218,15 +226,15 @@
                 <h3>Between</h3>
                 <div class="docs-example layout-grid-example">
                     <div class="container">
-                        <div class="row row--between">
+                        <div class="row flex-just-between">
                             <div class="col-3">
-                                .row--between
+                                .flex-just-between
                             </div>
                             <div class="col-3">
-                                .row--between
+                                .flex-just-between
                             </div>
                             <div class="col-3">
-                                .row--between
+                                .flex-just-between
                             </div>
                         </div>
                     </div>
@@ -234,15 +242,15 @@
                 <h3>Even</h3>
                 <div class="docs-example layout-grid-example">
                     <div class="container">
-                        <div class="row row--even">
+                        <div class="row flex-just-even">
                             <div class="col-3">
-                                .row--even
+                                .flex-just-even
                             </div>
                             <div class="col-3">
-                                .row--even
+                                .flex-just-even
                             </div>
                             <div class="col-3">
-                                .row--even
+                                .flex-just-even
                             </div>
                         </div>
                     </div>
@@ -250,15 +258,15 @@
                 <h3>Center</h3>
                 <div class="docs-example layout-grid-example">
                     <div class="container">
-                        <div class="row row--center">
+                        <div class="row flex-just-center">
                             <div class="col-3">
-                                .row--center
+                                .flex-just-center
                             </div>
                             <div class="col-3">
-                                .row--center
+                                .flex-just-center
                             </div>
                             <div class="col-3">
-                                .row--center
+                                .flex-just-center
                             </div>
                         </div>
                     </div>
@@ -272,50 +280,50 @@
 
                 <p>By default a column will fill the height of the row. To control the alignment within the row you can use .top, .middle or .bottom.</p>
 
-                <h4>Top</h4>
+                <h4>Start</h4>
                 <div class="docs-example layout-grid-example">
                     <div class="container">
-                        <div class="row row--top">
+                        <div class="row flex-align-items-start">
                             <div class="col">
-                                .row--top
+                                .flex-align-items-start
                             </div>
                             <div class="col">
-                                .row--top
+                                .flex-align-items-start
                             </div>
                             <div class="col">
-                                .row--top
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <h4>Middle</h4>
-                <div class="docs-example layout-grid-example">
-                    <div class="container my-2">
-                        <div class="row row--middle">
-                            <div class="col">
-                                .row--middle
-                            </div>
-                            <div class="col">
-                                .row--middle
-                            </div>
-                            <div class="col">
-                                .row--middle
+                                .flex-align-items-start
                             </div>
                         </div>
                     </div>
                 </div>
-                <h4>Bottom</h4>
+                <h4>Center</h4>
                 <div class="docs-example layout-grid-example">
                     <div class="container my-2">
-                        <div class="row row--bottom">
+                        <div class="row flex-align-items-center">
                             <div class="col">
-                                .row--bottom
+                                .flex-align-items-center
                             </div>
                             <div class="col">
-                                .row--bottom
+                                .flex-align-items-center
                             </div>
                             <div class="col">
-                                .row--bottom
+                                .flex-align-items-center
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <h4>End</h4>
+                <div class="docs-example layout-grid-example">
+                    <div class="container my-2">
+                        <div class="row flex-align-items-end">
+                            <div class="col">
+                                .flex-align-items-end
+                            </div>
+                            <div class="col">
+                                .flex-align-items-end
+                            </div>
+                            <div class="col">
+                                .flex-align-items-end
                             </div>
                         </div>
                     </div>
@@ -327,19 +335,19 @@
 
                 <div class="docs-example layout-grid-example">
                     <div class="container my-2">
-                        <div class="row row--start">
+                        <div class="row flex-just-start">
                             <div class="col-3">
-                                .row--start
+                                .flex-just-start
                             </div>
                         </div>
-                        <div class="row row--center">
+                        <div class="row flex-just-center">
                             <div class="col-3">
-                                .row--center
+                                .flex-just-center
                             </div>
                         </div>
-                        <div class="row row--end">
+                        <div class="row flex-just-end">
                             <div class="col-3">
-                                .row--end
+                                .flex-just-end
                             </div>
                         </div>
                     </div>
@@ -352,31 +360,31 @@
                 <h3>Row</h3>
                 <div class="docs-example layout-grid-example">
                     <div class="container">
-                        <div class="row row--reverse">
+                        <div class="row flex-row-r">
                             <div class="col">
-                                #1 .row--reverse
+                                #1 .flex-row-r
                             </div>
                             <div class="col">
-                                #2 .row--reverse
+                                #2 .flex-row-r
                             </div>
                             <div class="col">
-                                #3 .row--reverse
+                                #3 .flex-row-r
                             </div>
                         </div>
                     </div>
                 </div>
-                <h3>Stack Reverse</h3>
+                <h3>Column Reverse</h3>
                 <div class="docs-example layout-grid-example">
                     <div class="container">
-                        <div class="row row--stack-reverse">
+                        <div class="row flex-col-r">
                             <div class="col">
-                                #1 .row--stack-reverse
+                                #1 .flex-col-r
                             </div>
                             <div class="col">
-                                #2 .row--stack-reverse
+                                #2 .flex-col-r
                             </div>
                             <div class="col">
-                                #3 .row--stack-reverse
+                                #3 .flex-col-r
                             </div>
                         </div>
                     </div>
@@ -384,19 +392,17 @@
 
                 <h2>Order</h2>
 
-                <h3>First</h3>
-
                 <div class="docs-example layout-grid-example">
                     <div class="container">
                         <div class="row">
-                            <div class="col-4 col--last">
-                                #1 .col--last
+                            <div class="col-4 order-last">
+                                #1 .order-last
                             </div>
                             <div class="col-4">
                                 #2
                             </div>
-                            <div class="col-4 col--first">
-                                #3 .col--first
+                            <div class="col-4 order-first">
+                                #3 .order-first
                             </div>
                         </div>
                     </div>

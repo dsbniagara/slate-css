@@ -29,8 +29,8 @@
     --color-accent-a-80: hsla(27, 94%, 47%, .80);
     --color-accent-a-90: hsla(27, 94%, 47%, .90);
 
-    --color-gray-lighter: hsl(205, 8%, 95%);
-    --color-gray-light: hsl(205, 8%, 80%);
+    --color-gray-lighter: hsl(205, 8%, 80%);
+    --color-gray-light: hsl(205, 8%, 60%);
     --color-gray: hsl(205, 8%, 50%);
     --color-gray-dark: hsl(205, 8%, 40%);
     --color-gray-darker: hsl(205, 8%, 20%);
@@ -73,6 +73,16 @@
 .bg--$(name)-light { background-color: var( --color-$(name)-light ); }
 .bg--$(name)-dark { background-color: var( --color-$(name)-dark ); }
 .bg--$(name)-darker { background-color: var( --color-$(name)-darker ); }
+.fill--$(name) { fill: var( --color-$(name) ); }
+.fill--$(name)-lighter { fill: var( --color-$(name)-lighter ); }
+.fill--$(name)-light { fill: var( --color-$(name)-light ); }
+.fill--$(name)-dark { fill: var( --color-$(name)-dark ); }
+.fill--$(name)-darker { fill: var( --color-$(name)-darker ); }
+.stroke--$(name) { stroke: var( --color-$(name) ); }
+.stroke--$(name)-lighter { stroke: var( --color-$(name)-lighter ); }
+.stroke--$(name)-light { stroke: var( --color-$(name)-light ); }
+.stroke--$(name)-dark { stroke: var( --color-$(name)-dark ); }
+.stroke--$(name)-darker { stroke: var( --color-$(name)-darker ); }
 }
 
 .text--white { color: var( --color-white ); }

@@ -41,6 +41,9 @@
 .space-xxs {
     --space: var(--space-xxs);
 }
+.space-xs {
+    --space: var(--space-xs);
+}
 .space-s {
     --space: var(--space-s);
 }

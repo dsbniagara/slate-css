@@ -5,28 +5,25 @@
     --device-l: $device-l;
     --device-xl: $device-xl;
     --device-xxl: $device-xxl;
+    --device-xs-container: $device-xs-container;
+    --device-s-container: $device-s-container;
+    --device-m-container: $device-m-container;
+    --device-l-container: $device-l-container;
+    --device-xl-container: $device-xl-container;
+    --device-xxl-container: $device-xxl-container;
 }
 
-.block\@s,
-.flex\@s,
-.block\@m,
-.flex\@m,
-.block\@l,
-.flex\@l,
-.block\@xl,
-.flex\@xl,
-.block\@xxl,
-.flex\@xxl,
 .only\@s,
 .only\@m,
 .only\@l,
 .only\@xl,
-.only\@xxl { display: none; }
+.only\@xxl { display: none !important; }
 
+@media only screen and (max-width: $device-xs) {
+    .not\@xs { display: none !important; }
+}
 @media only screen and (min-width: $device-xs) {
     .only\@xs { display: none !important; }
-    .block\@s { display: block; }
-    .flex\@s { display: flex; }
 }
 @media only screen and (min-width: $device-xs) and (max-width: $device-s) {
     .only\@s { display: block !important; }
@@ -48,19 +45,25 @@
     .only\@xxl { display: block !important; }
     .not\@xxl { display: none !important; }
 }
-@media only screen and (min-width: $device-s) {
-    .block\@m { display: block; }
-    .flex\@m { display: flex; }
+
+
+@media only screen and (min-width: $device-xs) {
+    .until\@xs { display: none !important; }
+    .block\@s { display: block; }
+    .flex\@s { display: flex; }
 }
-@media only screen and (min-width: $device-m) {
-    .block\@l { display: block; }
-    .flex\@l { display: flex; }
+@media only screen and  (max-width: $device-s) {
+    .until\@s { display: none !important; }
 }
-@media only screen and (min-width: $device-l) {
-    .block\@xl { display: block; }
-    .flex\@xl { display: flex; }
+@media only screen and (max-width: $device-m) {
+    .until\@m { display: none !important; }
 }
-@media only screen and (min-width: $device-xl) {
-    .block\@xxl { display: block; }
-    .flex\@xxl { display: flex; }
+@media only screen (max-width: $device-l) {
+    .until\@l { display: none !important; }
+}
+@media only screen (max-width: $device-xl) {
+    .until\@xl { display: none !important; }
+}
+@media only screen and (max-width: $device-xl) {
+    .until\@xxl { display: none !important; }
 }

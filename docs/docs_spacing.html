@@ -5,34 +5,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Spacing - Slate</title>
     <link rel="stylesheet" href="./css/docs.css" />
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.js" defer></script>
 </head>
 <body data-theme="docs">
-    <header class="container">
+    <header class="container row" x-data="{ show: false }">
         <a class="brand" href="index.html">slate</a>
         <span class="badge badge--primary">0.1.0</span>
-        <nav class="nav">
-            <div class="nav-item"><a href="docs.html" class="nav-link">Docs</a></div>
-            <div class="nav-item"><a href="docs.html" class="nav-link">Components</a></div>
-            <div class="nav-item"><a href="docs.html" class="nav-link">Globals</a></div>
+        <nav class="nav nav@xs" :class="{ 'active': show }">
+            <ul class="nav-items">
+                <li class="nav-item"><a class="nav-link" href="docs.html">Docs</a></li>
+                <li class="nav-item"><a class="nav-link" href="components.html" >Components</a></li>
+                <li class="nav-item"><a class="nav-link" href="docs.html" >Globals</a></li>
+            </ul>
         </nav>
+        <button class="nav-toggle@xs ml-auto" :class="{ 'active': show }" type="button" @click="show = !show"><svg fill="none" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg></button>
     </header>
     <section class="page container">
         <div class="row">
-            <div class="col-m-2">
-                <nav class="page-nav nav nav--stacked">
-                    <a class="nav-link" href="docs.html">Introduction</a>
-                    <a class="nav-link" href="docs_installation.html">Installation</a>
-                    <a class="nav-link" href="docs_typography.html">Typography</a>
-                    <a class="nav-link" href="docs_layout.html">Layout</a>
-                    <a class="nav-link" href="docs_buttons.html">Buttons</a>
-                    <a class="nav-link" href="docs_forms.html">Forms</a>
-                    <a class="nav-link active" href="docs_spacing.html">Spacing</a>
-                    <a class="nav-link" href="docs_colors.html">Colors</a>
-                    <a class="nav-link" href="docs_devices.html">Devices</a>
-                    <a class="nav-link" href="docs_effects.html">Effects</a>
+            <div class="col" x-data="{ show: false }">
+                <button class="nav-toggle@s ml-auto" :class="{ 'active': show }" type="button" @click="show = !show"><svg fill="none" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg></button>
+                <nav class="page-nav nav@s nav--stacked" :class="{ 'active': show }">
+                    <ul class="nav-items">
+                        <li class="nav-item"><a class="nav-link active" href="docs.html">Introduction</a></li>
+                        <li class="nav-item"><a class="nav-link" href="docs_installation.html">Installation</a></li>
+                        <li class="nav-item"><a class="nav-link" href="docs_typography.html">Typography</a></li>
+                        <li class="nav-item"><a class="nav-link" href="docs_layout.html">Layout</a></li>
+                        <li class="nav-item"><a class="nav-link" href="docs_buttons.html">Buttons</a></li>
+                        <li class="nav-item"><a class="nav-link" href="docs_forms.html">Forms</a></li>
+                        <li class="nav-item"><a class="nav-link" href="docs_table.html">Table</a></li>
+                        <li class="nav-item"><a class="nav-link" href="docs_spacing.html">Spacing</a></li>
+                        <li class="nav-item"><a class="nav-link" href="docs_colors.html">Colors</a></li>
+                        <li class="nav-item"><a class="nav-link" href="docs_devices.html">Devices</a></li>
+                        <li class="nav-item"><a class="nav-link" href="docs_utility.html">Utility</a></li>
+                        <li class="nav-item"><a class="nav-link" href="docs_reset.html">Reset</a></li>
+                    </ul>
                 </nav>
             </div>
-            <div class="col-m-10">
+            <div class="col-10@m">
                 <h1>Spacing</h1>
                 
                 <p>Slate provides space units used throughout in many places.</p>

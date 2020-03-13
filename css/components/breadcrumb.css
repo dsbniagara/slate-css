@@ -1,14 +1,7 @@
 .breadcrumb {
-    padding: 1em 0;
-    font-size: .86em;
-
     a {
-        color: var(--color-text);
         display: inline-block;
-        &:last-child {
-            opacity: .8;
-            font-weight: bold;
-        }
+        color: var(--color-gray-light);
         &:hover {
             color: var(--color-primary);
         }
@@ -18,10 +11,9 @@
             height: 5px;
             margin: 0 .8em;
             content: "";
-            opacity: .2;
-            border-right: 2px solid var(--color-light);
-            border-bottom: 2px solid var(--color-light);
-            transform: rotate(-45deg);
+            border-right: 2px solid var(--color-gray-light);
+            border-bottom: 2px solid var(--color-gray-light);
+            transform: translateY(-2px) rotate(-45deg);
         }
         &:last-child:after {
             display: none;

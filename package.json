@@ -11,8 +11,13 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "docs": "parcel serve --no-cache --port 1236 docs/index.html",
     "prepublishOnly": "gulp css:build",
-    "css:watch": "gulp",
-    "css:build": "gulp css:build"
+    "watch": "gulp",
+    "build": "gulp build",
+    "build:all": "gulp build:all",
+    "build:base": "gulp build:base",
+    "build:utility": "gulp build:utility",
+    "build:components": "gulp build:components",
+    "build:effects": "gulp build:effects"
   },
   "author": "",
   "license": "ISC",

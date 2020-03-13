@@ -111,10 +111,3 @@ dl, ol, ul {
 ol ol, ol ul, ul ol, ul ul {
     margin-bottom: 0;
 }
-.text-empty {
-    font-style: italic;
-    color: rgba(0,0,0,.5);
-}
-.text-center {
-    text-align: center;
-}

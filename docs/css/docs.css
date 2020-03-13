@@ -2,9 +2,12 @@
 @import './variables.css';
 
 @slate base;
-@slate components/nav;
-@slate components/badge;
+@slate utility;
+@slate components;
 
+body {
+    background: #fff;
+}
 h1,h2,h3,h4,h5,h6 {
     font-weight: bold;
 }
@@ -12,7 +15,7 @@ body > header.container {
     display: flex;
     align-items: center;
     margin: 0 auto;
-    border-bottom: 1px solid var(--color-gray-lighter);
+    border-bottom: 1px solid var(--color-gray-a-10);
     padding: var(--space);
     z-index: 99;
     margin-bottom: calc(2 * var(--space));
@@ -46,6 +49,7 @@ body > .page .page-nav {
     }
 }
 body > .page {
+    padding-bottom: 1rem;
     h2,h3,h4 {
         margin-top: var(--space);
     }
@@ -164,7 +168,6 @@ section.hero {
     }
 }
 
-
 section.pitch-deck {
     .icon {
         background: var(--color-primary-a-30);
@@ -222,6 +225,7 @@ pre.code {
         height: 200px;
     }
 }
+
 .color-display--main {
     min-height: 200px;
 }
@@ -246,7 +250,6 @@ pre.code {
 @mixin colora accent {}
 @mixin colora gray {}
 @mixin colora danger {}
-
 
 .docs-not-only-demo {
     div[class^="not"] {
@@ -303,5 +306,76 @@ pre.code {
         width: 2200px;
         margin-left: 0;
         margin-bottom: 0;
+    }
+}
+
+.docs-toc {
+    border-radius: var(--space-xs);
+    padding: var(--space);
+    margin-bottom: var(--space-s);
+    background: var(--color-primary-a-10);
+    width: 300px;
+}
+
+.component {
+    .icon {
+        border-radius: var(--space-xs);
+        border: 1px solid var(--color-gray-lighter);
+        min-height: 100px;
+    }
+
+}
+
+.docs-demo {
+    border-radius: var(--space-xs);
+    border: 1px solid  var(--color-gray-a-10);
+    background: var(--color-gray-a-10);
+    min-height: 200px;
+}
+
+.demo-frame-toolbar {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: var(--space-xs);
+    .devices {
+        display: flex;
+        svg {
+            margin: 0 var(--space-xs);
+            .fill {
+                fill: var(--color-gray-lighter);
+            }
+            &:hover {
+                .fill {
+                    fill: var(--color-primary);   
+                }         
+            }
+        }
+    }
+}
+.demo-wrap {
+    display: flex;
+    overflow-x: auto;
+    width: 100%;
+    border-radius: var(--space-xs);
+    background: var(--color-gray-light);
+    border: 1px solid var(--color-gray-lighter); 
+}
+.demo-frame {
+    display: inline-flex;
+    iframe {
+        height: 300px;
+    }
+    .demo-frame-handle {
+        display: flex;
+        align-items: center;
+        background: var(--color-gray);
+        width: 20px;
+        border-left: 1px solid  var(--color-gray-a-10);
+        border-right: 1px solid  var(--color-gray-a-10);
+        svg {
+            width: 20px;
+            height: 20px;
+        }
     }
 }

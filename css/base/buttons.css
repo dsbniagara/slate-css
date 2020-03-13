@@ -8,7 +8,7 @@
     --btn-padding-x: var(--space-s);
     --btn-padding-y: var(--space-xs);
     --btn-shadow: 0 2px 2px #0000001c, 0 2px 3px #0000000f;
-    --btn-shadow-hover: 0 6px 9px #00000029, 0 2px 5px #0000000f;
+    --btn-shadow-hover: 0 6px 9px #0000001f, 0 2px 5px #0000000f;
 }
 
 
@@ -61,11 +61,11 @@
         }
     }
     &--subtle {
-        background: var(--color-gray-lightest);
+        background: var(--color-gray-lighter);
         color: var(--color-gray-dark);
         &:hover {
             color: var(--color-gray-darker);
-            background: var(--color-gray-lighter);
+            background: var(--color-gray-light);
         }
         &:focus {
             outline: none;
