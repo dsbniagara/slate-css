@@ -1,7 +1,7 @@
 {
   "name": "@dsbn/slate-css",
   "description": "Slate is a ui system for building web sites / apps",
-  "version": "0.1.0-alpha.3",
+  "version": "0.1.0-alpha.4",
   "main": "src/postcss/index.js",
   "style": "build/slate.min.css",
   "directories": {
@@ -10,7 +10,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "docs": "parcel --no-cache docs/index.html",
-    "prepublishOnly": "gulp css:build",
+    "docs:build": "parcel build --no-cache docs/index.html",
+    "prepublishOnly": "gulp build",
     "watch": "gulp",
     "build": "gulp build",
     "build:all": "gulp build:all",
@@ -37,6 +38,7 @@
     "fs-promise": "^2.0.3",
     "gulp-rename": "^1.4.0",
     "lodash": "^4.17.15",
+    "parcel-bundler": "^1.12.4",
     "postcss-extract-value": "^0.5.1",
     "postcss-for": "^2.1.1",
     "postcss-media-variables": "^2.0.1",

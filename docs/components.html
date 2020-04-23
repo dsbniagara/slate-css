@@ -15,12 +15,41 @@
             <ul class="nav-items">
                 <li class="nav-item"><a class="nav-link" href="docs.html">Docs</a></li>
                 <li class="nav-item"><a class="nav-link" href="components.html" >Components</a></li>
-                <li class="nav-item"><a class="nav-link" href="docs.html" >Globals</a></li>
             </ul>
         </nav>
         <button class="nav-toggle@xs ml-auto" :class="{ 'active': show }" type="button" @click="show = !show"><svg fill="none" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg></button>
     </header>
-    <section class="page container">
+    <section class="hero text-center">
+        <h1>Coming soon!</h1>
+        
+        <div class="rectangular-plane">
+            <div class="rectangular-group">
+                <div class="rectangle rectangle--xl rectangle--outline"></div>
+                <div class="ml-3 rectangle rectangle--l"></div>
+            </div>
+            <div class="rectangular-group">
+                <div class="rectangle rectangle--xxl rectangle--dark"></div>
+                <div class="ml-8 rectangle rectangle--outline rectangle--gray"></div>
+                <div class="ml-5 rectangle rectangle--l"></div>
+            </div>
+            <div class="rectangular-group">
+                <div class="ml-7 rectangle rectangle--xl rectangle--dark"></div>
+                <div class="fl rectangle rectangle--xl rectangle--dark"></div>
+                <div class="fl ml-1 rectangle rectangle"></div>
+            </div>
+            <div class="rectangular-group">
+                <div class="rectangle rectangle--l rectangle--outline"></div>
+                <div class="ml-1 rectangle rectangle--xl"></div>
+            </div>
+            <div class="rectangular-group">
+                <div class="rectangle rectangle--l"></div>
+            </div>
+            <div class="rectangular-group">
+                <div class="rectangle rectangle--l rectangle--outline"></div>
+            </div>
+        </div>
+    </section>
+    <section class="page container" style="display: none;">
         <div class="row">
             <div class="col" x-data="{ show: false }">
                 <button class="nav-toggle@s ml-auto" :class="{ 'active': show }" type="button" @click="show = !show"><svg fill="none" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg></button>

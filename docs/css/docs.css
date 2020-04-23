@@ -38,15 +38,15 @@ body > header.container {
         }
     }
 }
-
+body > header.container .nav a,
+body > .page .nav-link {
+    color: var(--color-text);
+    &.active {
+        color: var(--color-primary);
+    }
+}
 body > .page .page-nav {
     margin: 0 calc(-1*var(--space));
-    .nav-link {
-        color: var(--color-text);
-        &.active {
-            color: var(--color-primary);
-        }
-    }
 }
 body > .page {
     padding-bottom: 1rem;
@@ -66,7 +66,7 @@ section.hero {
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60' viewBox='0 0 60 60'%3E%3Ccircle cx='1' cy='1' r='1' fill='%2375818a' fill-opacity='1'%3E%3C/circle%3E%3C/svg%3E");
 
     h1 {
-        font-size: 5rem;
+        font-size: 4rem;
         b {
             position: relative;
             &:after {
@@ -188,8 +188,8 @@ section.pitch-deck {
 
 pre.code {
     padding: calc(2*var(--space));
-    background: var(--color-gray-lighter);
-    border-radius: var(--border-radius);
+    background: var(--color-gray-a-10);
+    border-radius: 10px;
     margin: calc(2*var(--space)) 0;
     overflow: auto;
 }
@@ -409,4 +409,10 @@ pre.code {
     padding: var(--space-l);
     background: var(--color-gray-darker);
     color: #fff;
+}
+
+.doc-note {
+    padding: var(--space);
+    border-left: 4px solid var(--color-danger);
+    background: var(--color-danger-a-20);
 }
