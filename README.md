@@ -1,6 +1,6 @@
 # @dsbn/slate-css  
 
-Slate is a CSS framework for building web sites / apps
+Slate is a small front end framework for building reusable interfaces.
 
-[Documentation](https://dsbn-slate-css.netlify.com/)
+[Documentation](https://dsbn-slate-css.netlify.app/)
 [Github](https://github.com/dsbniagara/slate-css)
