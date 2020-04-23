@@ -1,46 +1,66 @@
-window.onload = () => {
-    demoResizing();
-}
-
-
-function demoResizing() {
-    const h = document.querySelectorAll('.demo-frame-handle');
-    for (let i = 0; i < h.length; i++) {
-        const handle = h[i];
-        const frame = handle.parentElement.querySelector('iframe');
-        handle.addEventListener('mousedown', function (e) {
-            e.preventDefault();
-
-            const event = resize(frame,handle);
-            window.addEventListener('mousemove', event);
-            window.addEventListener('mouseup', ()=>{
-                frame.style.pointerEvents = 'auto';
-                window.removeEventListener('mousemove', event)
-            })
-        })
-    }
-}
-
-function resize(frame,handle) {
-    return (e) => {
-        e.preventDefault();
-        frame.style.pointerEvents = 'none';
-        frame.style.width = e.pageX - frame.getBoundingClientRect().left + 'px';
-    }
-}
-
-
-new Vue({
-    el: '#demo-presentation',
-    props: ['c'],
+Vue.component('demo', {
+    props: ['component'],
     data() {
         return {
-            size: '98.7%'
+            size: '98.7%',
+            content: '',
+            tab: 'display'
         }
     },
-    template: `<div>
+    computed: {
+        componentUrl() {
+            return `components/${this.component}.html`
+        },
+        dom() {
+            var content = this.content;
+            var dom = document.createElement( 'html' );
+            dom.innerHTML = content;
+            return dom;
+        },
+        title() {
+            var title = this.dom.getElementsByTagName('title')[0];
+            if( title ) return title.innerText;
+            return '';
+        },
+        code() {
+            var code = this.dom.getElementsByTagName('body')[0];
+            if( code ) return code.innerHTML.trim();
+            return '';
+        }
+    },
+    mounted() {
+        fetch( this.componentUrl ).then(response => {
+            return response.text();
+        })
+        .then(data => {
+            this.content = data;
+        });
+    },
+    methods: {
+        mousedown(e) {
+            window.addEventListener('mousemove', this.resize);
+            window.addEventListener('mouseup', this.mouseup);
+        },
+        mouseup(e){
+            this.$refs.iframe.style.pointerEvents = 'auto';
+            window.removeEventListener('mousemove', this.resize);
+        },
+        resize(e) {
+            this.$refs.iframe.style.pointerEvents = 'none';
+            this.$refs.iframe.style.width = e.pageX - this.$refs.iframe.getBoundingClientRect().left + 'px';
+        },
+        copy() {
+            if (!navigator.clipboard) {
+                alert('Browser copy not supported');
+                return
+            }
+            navigator.clipboard.writeText(this.code);
+        }
+    },
+    template: `<div class="demo-preview">
     <div class="demo-frame-toolbar">
-        <div class="devices">
+        <div class="title text-m">{{title}}</div>
+        <div class="devices" v-if="tab=='display'">
             <svg @click="size='592px'" width="14" height="20" viewBox="0 0 14 20">
                 <path id="xs" d="M12.71,16.29l-.15-.12a.76.76,0,0,0-.18-.09L12.2,16a1,1,0,0,0-.91.27,1.15,1.15,0,0,0-.21.33,1,1,0,0,0,1.3,1.31,1.46,1.46,0,0,0,.33-.22.99.99,0,0,0,0-1.4ZM16,2H8A3,3,0,0,0,5,5V19a3,3,0,0,0,3,3h8a3,3,0,0,0,3-3V5A3,3,0,0,0,16,2Zm1,17a1,1,0,0,1-1,1H8a1,1,0,0,1-1-1V5A1,1,0,0,1,8,4h8a1,1,0,0,1,1,1Z" transform="translate(-5 -2)" class="fill" />
             </svg>
@@ -61,15 +81,24 @@ new Vue({
             </svg>
         </div>
         <div class="actions">
-            <a class="btn btn--s">Source</a>
-            <a class="btn btn--s btn--primary">Display</a>
+            <nav class="nav nav-active--fill-light">
+                <ul class="nav-items">
+                    <li class="nav-item nav-sep"><a class="nav-link" @click="copy()">Copy</a></li>
+                    <li class="nav-item" :class="{'active':tab=='display'}"><a tabindex="1" class="nav-link" @click="tab='display'">Preview</a></li>
+                    <li class="nav-item" :class="{'active':tab=='source'}"><a class="nav-link" @click="tab='source'">Code</a></li>
+                </ul>
+            </nav>
         </div>
     </div>
-    <div class="demo-frame">
-        <iframe :style="{width: size}" src="components/navbar.html"></iframe>
-        <div class="demo-frame-handle"><svg fill="#fff" viewBox="0 0 24 24"><path d="M8 5h2v14H8zM14 5h2v14h-2z"></path></svg></div>
+    <div class="demo-content">
+        <div v-if="tab=='display'" class="demo-frame">
+            <iframe ref="iframe" :style="{width: size}" :srcdoc="content"></iframe>
+            <div @mousedown.prevent="mousedown" ref="handle" class="demo-frame-handle"><svg fill="#fff" viewBox="0 0 24 24"><path d="M8 5h2v14H8zM14 5h2v14h-2z"></path></svg></div>
+        </div>
+        <div v-if="tab=='source'" class="demo-source"><pre>{{code}}</pre></div>
     </div>
-</div>
-    `
+</div>`
 })
-// <div id="demo-presentation" c="test"></div>
+new Vue({
+    el: '#docs',
+});

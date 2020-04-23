@@ -9,7 +9,7 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "docs": "parcel serve --no-cache --port 1236 docs/index.html",
+    "docs": "parcel --no-cache docs/index.html",
     "prepublishOnly": "gulp css:build",
     "watch": "gulp",
     "build": "gulp build",
