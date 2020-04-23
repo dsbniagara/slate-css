@@ -38,6 +38,7 @@
     "fs-promise": "^2.0.3",
     "gulp-rename": "^1.4.0",
     "lodash": "^4.17.15",
+    "parcel": "^1.12.4",
     "parcel-bundler": "^1.12.4",
     "postcss-extract-value": "^0.5.1",
     "postcss-for": "^2.1.1",
