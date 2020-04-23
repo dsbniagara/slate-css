@@ -60,6 +60,16 @@
     --color-danger-a-90: hsla(0, 70%, 45%, .90);
 
     --color-white: hsl(220, 33%, 98%);
+    --color-white-a-10: rgba(220, 33%, 98%, 0.1);
+    --color-white-a-20: hsla(220, 33%, 98%, .20);
+    --color-white-a-30: hsla(220, 33%, 98%, .30);
+    --color-white-a-40: hsla(220, 33%, 98%, .40);
+    --color-white-a-50: hsla(220, 33%, 98%, .50);
+    --color-white-a-60: hsla(220, 33%, 98%, .60);
+    --color-white-a-70: hsla(220, 33%, 98%, .70);
+    --color-white-a-80: hsla(220, 33%, 98%, .80);
+    --color-white-a-90: hsla(220, 33%, 98%, .90);
+
     --color-text: hsl(210, 11%, 15%);
 }
 @define-mixin color $name {
@@ -88,7 +98,9 @@
 .text--white { color: var( --color-white ); }
 .bg--white { background-color: var( --color-white ); }
 .text--text { text: var( --color-text ); }
-.bg--text { background-color: va    r( --color-text ); }
+.bg--text { background-color: var( --color-text ); }
+.fill--white { fill: var( --color-white ); }
+.stroke--white { stroke: var( --color-white ); }
 
 @mixin color primary {}
 @mixin color accent {}

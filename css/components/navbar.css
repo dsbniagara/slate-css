@@ -1,23 +1,38 @@
 .navbar {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    margin: 0 auto;
-    border-bottom: 1px solid var(--color-gray-lighter);
-    padding: var(--space);
-    z-index: 99;
-    margin-bottom: var(--space);
-    .icon {
-        svg, img {
-            display: block;
-        }
+    .container,
+    .container-fluid {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        margin: 0 auto;
+        padding: var(--space);
+        z-index: 99;
     }
     .brand {
-        color: var(--text-base);
-        font-size: var(--text-l);
-        font-weight: bold;
-        margin: 0 var(--space);
+        display: flex;
+        align-items: center;
+        margin-right: var(--space);
+        .brand-icon {
+            svg, img {
+                display: block;
+            }
+        }
+        .brand-name {
+            color: var(--color-text);
+            font-size: var(--text-l);
+            font-weight: bold;
+            margin: 0 var(--space-xs);
+        }
     }
+    &.navbar--dark {
+        .nav-link {
+            color: var(--color-white-a-80);
+            &:hover {
+                color: var(--color-primary);
+            }
+        }
+    }    
+    /* Reponsive toggle */
     nav[class^="nav"].active {
         width: 100%;
         margin-top: var(--space);

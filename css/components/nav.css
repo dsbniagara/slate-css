@@ -5,7 +5,7 @@
 .nav\@l,
 .nav\@xl,
 .nav\@xxl {  
-  display: block;
+  display: flex;
   ul.nav-items {
     display: flex;
     flex-wrap: wrap;
@@ -14,12 +14,17 @@
     list-style: none;
   }
   .nav-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     .nav-link {
+      flex: 1 1 auto;
       position: relative;
       display: block;
       padding: var(--space-s) var(--space);
       cursor: pointer;
       color: var(--color-gray);
+      font-weight: 500;
       &:hover {
         text-decoration: none;
         color: var(--color-text);
@@ -40,6 +45,16 @@
         color: #fff;
         &:hover {
           color: #fff;
+        }
+      }
+  }
+  &-active--fill-light {
+    .nav-item.active > .nav-link {
+        border-radius: var(--space-xs);
+        background: var(--color-primary-a-10);
+        color: var(--color-primary);
+        &:hover {
+          color: var(--color-primary);
         }
       }
   }
@@ -143,26 +158,26 @@
 }
 
 @media only screen and (min-width: $device-xs) {
-  .nav\@xs { display: block; }
+  .nav\@xs { display: flex; }
   .nav-toggle\@xs { display: none; }
 }
 @media only screen and (min-width: $device-s) {
-  .nav\@s { display: block; }
+  .nav\@s { display: flex; }
   .nav-toggle\@s { display: none; }
 }
 @media only screen and (min-width: $device-m) {
-  .nav\@m { display: block; }
+  .nav\@m { display: flex; }
   .nav-toggle\@m { display: none; }
 }
 @media only screen and (min-width: $device-l) {
-  .nav\@l { display: block; }
+  .nav\@l { display: flex; }
   .nav-toggle\@l { display: none; }
 }
 @media only screen and (min-width: $device-xl) {
-  .nav\@xl { display: block; }
+  .nav\@xl { display: flex; }
   .nav-toggle\@xl { display: none; }
 }
 @media only screen and (min-width: $device-xxl) {
-  .nav\@xxl { display: block; }
+  .nav\@xxl { display: flex; }
   .nav-toggle\@xxl { display: none; }
 }
