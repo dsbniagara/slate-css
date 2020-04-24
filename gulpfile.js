@@ -1,18 +1,18 @@
-var gulp = require("gulp");
-var postcss = require("gulp-postcss");
-var partialImport = require("postcss-partial-import");
-var slatecss = require('./src/postcss');
+var gulp = require('gulp');
 var cleanCSS = require('gulp-clean-css');
 var rename = require('gulp-rename');
 
-gulp.task("build:all", () => build("./css/all.css","slate.min.css") )
-gulp.task("build:base", () => build("./css/base.css","slate.base.min.css") )
-gulp.task("build:utility", () => build("./css/utility.css","slate.utility.min.css") )
-gulp.task("build:components", () => build("./css/components.css","slate.components.min.css") )
-gulp.task("build:effects", () => build("./css/effects.css","slate.effects.min.css") )
+var sass = require('gulp-sass');
+sass.compiler = require('node-sass');
+
+gulp.task("build:all", () => build("./src/all.scss","slate.css") )
+gulp.task("build:base", () => build("./src/base.scss","base.css") )
+gulp.task("build:utility", () => build("./src/utility.scss","utility.css") )
+gulp.task("build:components", () => build("./src/components.scss","components.css") )
+gulp.task("build:effects", () => build("./src/effects.scss","effects.css") )
 
 gulp.task("default", function() {
-    gulp.watch("./css/**/*.css", gulp.series("build"))
+    gulp.watch("./src/**/*.css", gulp.series("build"))
 })
 gulp.task("build", gulp.series(
         'build:all',
@@ -24,16 +24,9 @@ gulp.task("build", gulp.series(
 )
 
 function build(source,name){
-    var processors = [
-        partialImport(),
-        slatecss(),
-        // cssnext({
-        //     browsers: ["> 1%"],
-        // })
-    ]
     return gulp.src(source)
-               .pipe(postcss(processors))
-               .pipe(cleanCSS())
-               .pipe(rename(name))
-               .pipe(gulp.dest("./build"))
+            .pipe(sass.sync().on('error', sass.logError))
+            .pipe(cleanCSS())
+            .pipe(rename(name))
+            .pipe(gulp.dest("./css"))
 }

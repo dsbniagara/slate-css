@@ -1,9 +1,7 @@
-@import '../fonts/inter.css';
-@import './variables.css';
+@import '../fonts/inter';
+@import './variables';
 
-@slate base;
-@slate utility;
-@slate components;
+@import '../../css/slate';
 
 body {
     background: #fff;
@@ -234,22 +232,22 @@ pre.code {
     border: 2px solid var(--color-primary);
 }
 
-@define-mixin colora $name {
-    .docs-bg--$(name)-a-10 { background-color: var( --color-$(name)-a-10 ); }
-    .docs-bg--$(name)-a-20 { background-color: var( --color-$(name)-a-20 ); }
-    .docs-bg--$(name)-a-30 { background-color: var( --color-$(name)-a-30 ); }
-    .docs-bg--$(name)-a-40 { background-color: var( --color-$(name)-a-40 ); }
-    .docs-bg--$(name)-a-50 { background-color: var( --color-$(name)-a-50 ); }
-    .docs-bg--$(name)-a-60 { background-color: var( --color-$(name)-a-60 ); }
-    .docs-bg--$(name)-a-70 { background-color: var( --color-$(name)-a-70 ); }
-    .docs-bg--$(name)-a-80 { background-color: var( --color-$(name)-a-80 ); }
-    .docs-bg--$(name)-a-90 { background-color: var( --color-$(name)-a-90 ); }
+@mixin colora ($name) {
+    .docs-bg--#{$name}-a-10 { background-color: var( --color-#{$name}-a-10 ); }
+    .docs-bg--#{$name}-a-20 { background-color: var( --color-#{$name}-a-20 ); }
+    .docs-bg--#{$name}-a-30 { background-color: var( --color-#{$name}-a-30 ); }
+    .docs-bg--#{$name}-a-40 { background-color: var( --color-#{$name}-a-40 ); }
+    .docs-bg--#{$name}-a-50 { background-color: var( --color-#{$name}-a-50 ); }
+    .docs-bg--#{$name}-a-60 { background-color: var( --color-#{$name}-a-60 ); }
+    .docs-bg--#{$name}-a-70 { background-color: var( --color-#{$name}-a-70 ); }
+    .docs-bg--#{$name}-a-80 { background-color: var( --color-#{$name}-a-80 ); }
+    .docs-bg--#{$name}-a-90 { background-color: var( --color-#{$name}-a-90 ); }
 }
 
-@mixin colora primary {}
-@mixin colora accent {}
-@mixin colora gray {}
-@mixin colora danger {}
+@include colora ('primary');
+@include colora ('accent');
+@include colora ('gray');
+@include colora ('danger');
 
 .docs-not-only-demo {
     div[class^="not"] {

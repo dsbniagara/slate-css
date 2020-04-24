@@ -6,34 +6,34 @@
   float: right;
 }
 
-@define-mixin cols $device {
+@mixin cols($device) {
   
-  .col$(device),
-  .col-1$(device),
-  .col-2$(device),
-  .col-3$(device),
-  .col-4$(device),
-  .col-5$(device),
-  .col-6$(device),
-  .col-7$(device),
-  .col-8$(device),
-  .col-9$(device),
-  .col-10$(device),
-  .col-11$(device),
-  .col-12$(device),
-  .col-offset-0$(device),
-  .col-offset-1$(device),
-  .col-offset-2$(device),
-  .col-offset-3$(device),
-  .col-offset-4$(device),
-  .col-offset-5$(device),
-  .col-offset-6$(device),
-  .col-offset-7$(device),
-  .col-offset-8$(device),
-  .col-offset-9$(device),
-  .col-offset-10$(device),
-  .col-offset-11$(device),
-  .col-offset-12$(device) {
+  .col#{$device},
+  .col-1#{$device},
+  .col-2#{$device},
+  .col-3#{$device},
+  .col-4#{$device},
+  .col-5#{$device},
+  .col-6#{$device},
+  .col-7#{$device},
+  .col-8#{$device},
+  .col-9#{$device},
+  .col-10#{$device},
+  .col-11#{$device},
+  .col-12#{$device},
+  .col-offset-0#{$device},
+  .col-offset-1#{$device},
+  .col-offset-2#{$device},
+  .col-offset-3#{$device},
+  .col-offset-4#{$device},
+  .col-offset-5#{$device},
+  .col-offset-6#{$device},
+  .col-offset-7#{$device},
+  .col-offset-8#{$device},
+  .col-offset-9#{$device},
+  .col-offset-10#{$device},
+  .col-offset-11#{$device},
+  .col-offset-12#{$device} {
     box-sizing: border-box;
     -webkit-box-flex: 0;
     -ms-flex: 0 0 auto;
@@ -41,25 +41,25 @@
     padding-right: var(--space);
     padding-left: var(--space);
   }
-  .col$(device) {
+  .col#{$device} {
     -webkit-box-flex: 1;
     -ms-flex-positive: 1;
     flex: 1 0 auto;
     max-width: 100%;
   }
 
-  .col-offset-0$(device) {
+  .col-offset-0#{$device} {
     margin-left: 0;
   }
 
   @for $i from 1 to 12 {
-  .col-$(i)$(device) {
-    -ms-flex-preferred-size: calc((100%/12)*$(i));
-    flex-basis: calc((100%/12)*$(i));
-    max-width: calc((100%/12)*$(i));
+  .col-#{$i}#{$device} {
+    -ms-flex-preferred-size: calc((100%/12)*#{$i});
+    flex-basis: calc((100%/12)*#{$i});
+    max-width: calc((100%/12)*#{$i});
   }
-  .col-offset-$(i)$(device) {
-    margin-left: calc((100%/12)*$(i));
+  .col-offset-#{$i}#{$device} {
+    margin-left: calc((100%/12)*#{$i});
   }
   }
 }
@@ -82,7 +82,7 @@
   margin-left: calc(-1*var(--space));
 }
 
-@mixin cols {}
+@include cols ('');
 
 .col,
 [class^=col-] {
@@ -94,42 +94,42 @@
 }
 
 @media only screen and (max-width: $device-xs) {
-  @mixin cols \@xs {}
+  @include cols ('\\@xs')
 }
 
 @media only screen and (min-width: $device-xs) {
   .container {
     max-width: $device-xs-container;
   }
-  @mixin cols \@s {}
+  @include cols ('\\@s')
 }
 
 @media only screen and (min-width: $device-s) {
   .container {
     max-width: $device-s-container;
   }
-  @mixin cols \@m {}
+  @include cols ('\\@m')
 }
 
 @media only screen and (min-width: $device-m) {
   .container {
     max-width: $device-m-container;
   }
-  @mixin cols \@l {}
+  @include cols ('\\@l')
 }
 
 @media only screen and (min-width: $device-l) {
   .container {
     max-width: $device-l-container;
   }
-  @mixin cols \@xl {}
+  @include cols ('\\@xl')
 }
 
 @media only screen and (min-width: $device-xl) {
   .container {
     max-width: $device-xl-container;
   }
-  @mixin cols \@xxl {}
+  @include cols ('\\@xxl')
 }
 @media only screen and (min-width: $device-xxl) {
   .container {

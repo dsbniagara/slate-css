@@ -72,38 +72,39 @@
 
     --color-text: hsl(210, 11%, 15%);
 }
-@define-mixin color $name {
-.text--$(name) { color: var( --color-$(name) ); }
-.text--$(name)-lighter { color: var( --color-$(name)-lighter ); }
-.text--$(name)-light { color: var( --color-$(name)-light ); }
-.text--$(name)-dark { color: var( --color-$(name)-dark ); }
-.text--$(name)-darker { color: var( --color-$(name)-darker ); }
-.bg--$(name) { background-color: var( --color-$(name) ); }
-.bg--$(name)-lighter { background-color: var( --color-$(name)-lighter ); }
-.bg--$(name)-light { background-color: var( --color-$(name)-light ); }
-.bg--$(name)-dark { background-color: var( --color-$(name)-dark ); }
-.bg--$(name)-darker { background-color: var( --color-$(name)-darker ); }
-.fill--$(name) { fill: var( --color-$(name) ); }
-.fill--$(name)-lighter { fill: var( --color-$(name)-lighter ); }
-.fill--$(name)-light { fill: var( --color-$(name)-light ); }
-.fill--$(name)-dark { fill: var( --color-$(name)-dark ); }
-.fill--$(name)-darker { fill: var( --color-$(name)-darker ); }
-.stroke--$(name) { stroke: var( --color-$(name) ); }
-.stroke--$(name)-lighter { stroke: var( --color-$(name)-lighter ); }
-.stroke--$(name)-light { stroke: var( --color-$(name)-light ); }
-.stroke--$(name)-dark { stroke: var( --color-$(name)-dark ); }
-.stroke--$(name)-darker { stroke: var( --color-$(name)-darker ); }
+
+@mixin colorize($name) {
+    .text--#{$name} { color: var( --color-#{$name} ); }
+    .text--#{$name}-lighter { color: var( --color-#{$name}-lighter ); }
+    .text--#{$name}-light { color: var( --color-#{$name}-light ); }
+    .text--#{$name}-dark { color: var( --color-#{$name}-dark ); }
+    .text--#{$name}-darker { color: var( --color-#{$name}-darker ); }
+    .bg--#{$name} { background-color: var( --color-#{$name} ); }
+    .bg--#{$name}-lighter { background-color: var( --color-#{$name}-lighter ); }
+    .bg--#{$name}-light { background-color: var( --color-#{$name}-light ); }
+    .bg--#{$name}-dark { background-color: var( --color-#{$name}-dark ); }
+    .bg--#{$name}-darker { background-color: var( --color-#{$name}-darker ); }
+    .fill--#{$name} { fill: var( --color-#{$name} ); }
+    .fill--#{$name}-lighter { fill: var( --color-#{$name}-lighter ); }
+    .fill--#{$name}-light { fill: var( --color-#{$name}-light ); }
+    .fill--#{$name}-dark { fill: var( --color-#{$name}-dark ); }
+    .fill--#{$name}-darker { fill: var( --color-#{$name}-darker ); }
+    .stroke--#{$name} { stroke: var( --color-#{$name} ); }
+    .stroke--#{$name}-lighter { stroke: var( --color-#{$name}-lighter ); }
+    .stroke--#{$name}-light { stroke: var( --color-#{$name}-light ); }
+    .stroke--#{$name}-dark { stroke: var( --color-#{$name}-dark ); }
+    .stroke--#{$name}-darker { stroke: var( --color-#{$name}-darker ); }
 }
 
 .text--white { color: var( --color-white ); }
 .bg--white { background-color: var( --color-white ); }
-.text--text { text: var( --color-text ); }
+.text--text { color: var( --color-text ); }
 .bg--text { background-color: var( --color-text ); }
 .fill--white { fill: var( --color-white ); }
 .stroke--white { stroke: var( --color-white ); }
 
-@mixin color primary {}
-@mixin color accent {}
-@mixin color gray {}
-@mixin color text {}
-@mixin color danger {}
+@include colorize ('primary');
+@include colorize ('accent');
+@include colorize ('gray');
+@include colorize ('text');
+@include colorize ('danger');

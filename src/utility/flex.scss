@@ -9,81 +9,81 @@
 .block\@xxl,
 .flex\@xxl { display: none; }
 
-@define-mixin device $device {
+@mixin flexDevice ($device) {
     
-  .block$(device) { display: block; }
-  .flex$(device) { display: flex; }
+  .block#{$device} { display: block; }
+  .flex#{$device} { display: flex; }
     
-  .flex-col$(device) {
+  .flex-col#{$device} {
     flex-direction: column;
     flex-wrap: nowrap;
   }
-  .flex-col-r$(device) {
+  .flex-col-r#{$device} {
     flex-direction: column-reverse;
     flex-wrap: nowrap;
   }
-  .flex-row$(device) {
+  .flex-row#{$device} {
     flex-direction: row;
   }
-  .flex-row-r$(device) {
+  .flex-row-r#{$device} {
     flex-direction: row-reverse;
   }  
 
-  .flex-just-start$(device) {
+  .flex-just-start#{$device} {
     justify-content: flex-start;
   }  
-  .flex-just-center$(device) {
+  .flex-just-center#{$device} {
     justify-content: center;
   }  
-  .flex-just-end$(device) {
+  .flex-just-end#{$device} {
     justify-content: flex-end;
   }  
-  .flex-just-around$(device) {
+  .flex-just-around#{$device} {
     justify-content: space-around;
   }  
-  .flex-just-between$(device) {
+  .flex-just-between#{$device} {
     justify-content: space-between;
   }
-  .flex-just-even$(device) {
+  .flex-just-even#{$device} {
     justify-content: space-evenly;
   }
   
-  .flex-align-items-start$(device) {
+  .flex-align-items-start#{$device} {
     align-items: flex-start;
   }  
-  .flex-align-items-center$(device) {
+  .flex-align-items-center#{$device} {
     align-items: center;
   }
-  .flex-align-items-end$(device) {
+  .flex-align-items-end#{$device} {
     align-items: flex-end;
   }
   
-  .order-first$(device) {
+  .order-first#{$device} {
     order: -1;
   }  
-  .order-last$(device) {
+  .order-last#{$device} {
     order: 1;
   }
 }
 
 
-@mixin device {}
+@include flexDevice ('');
 
 @media only screen and (max-width: $device-xs) {
-  @mixin device \@xs {}
+  @include flexDevice ('\\@xs');
 }
 @media only screen and (min-width: $device-xs) {
-  @mixin device \@s {}
+  @include flexDevice ('\\@s');
 }
 @media only screen and (min-width: $device-s) {
-  @mixin device \@m {}
+  @include flexDevice ('\\@m');
 }
 @media only screen and (min-width: $device-m) {
-  @mixin device \@l {}
+  @include flexDevice ('\\@l');
 }
 @media only screen and (min-width: $device-l) {
-  @mixin device \@xl {}
+  @include flexDevice ('\\@xl');
 }
 @media only screen and (min-width: $device-xl) {
-  @mixin device \@xxl {}
+  @include flexDevice ('\\@xxl');
 }

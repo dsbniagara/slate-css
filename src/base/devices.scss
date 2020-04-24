@@ -52,16 +52,16 @@
     .block\@s { display: block; }
     .flex\@s { display: flex; }
 }
-@media only screen and  (max-width: $device-s) {
+@media only screen and (max-width: $device-s) {
     .until\@s { display: none !important; }
 }
 @media only screen and (max-width: $device-m) {
     .until\@m { display: none !important; }
 }
-@media only screen (max-width: $device-l) {
+@media only screen and (max-width: $device-l) {
     .until\@l { display: none !important; }
 }
-@media only screen (max-width: $device-xl) {
+@media only screen and (max-width: $device-xl) {
     .until\@xl { display: none !important; }
 }
 @media only screen and (max-width: $device-xl) {

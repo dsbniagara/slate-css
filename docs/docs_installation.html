@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Installation - Slate</title>
-    <link rel="stylesheet" href="./css/docs.css" />
+    <link rel="stylesheet" href="./css/docs.scss" />
     <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.js" defer></script>
 </head>
 <body data-theme="docs">
     <header class="container row" x-data="{ show: false }">
         <a class="brand" href="index.html">slate</a>
-        <span class="badge badge--primary">0.1.0-alpha.4</span>
+        <span class="badge badge--primary">0.1.0-alpha.5</span>
         <nav class="nav nav@xs" :class="{ 'active': show }">
             <ul class="nav-items">
                 <li class="nav-item"><a class="nav-link" href="docs.html">Docs</a></li>
@@ -55,7 +55,7 @@
                 
                 <p>Start with installing from our npm package and installing the PostCSS dependancies.</p>
 
-<pre class="code">npm i -s @dsbn/slate-css postcss-simple-vars postcss-mixins postcss-nested postcss-for</pre>
+<pre class="code">npm i -s @dsbn/slate-css postcss-loader postcss-simple-vars postcss-mixins postcss-nested postcss-for</pre>
 
                 <p>The next step is to configure your postcss setup. There are many different options for this but a simple setup is with a new slate.config.js file:</p>
                 
