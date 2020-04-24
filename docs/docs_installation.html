@@ -49,30 +49,34 @@
 
                 <pre class="code">npm i -s @dsbn/slate-css</pre>
 
-                <p>Now you can use the provided <code>@dsbn/slate-css/dist/slate.min.css</code> in your project. As slate uses css variables you can customize every variable with the exception of the <a href="docs_devices.html">device widths</a>.</p>
+                <p>Now you can use the built css files in your project.</p>
 
-                <h2>With PostCSS</h2>
+                <pre class="code">&lt;link rel="stylesheet" href="@dsbn/slate-css/css/slate.scss"&gt;</pre>
+
+                <p>or with JavaScript and bundler</p>
+                <pre class="code">import '@dsbn/slate-css';</pre>
+
+                <p>You can also pick and choose from the preorganized bundles Slate provides.</p>
+
+                <p><b>@dsbn/slate-css/css/slate.scss</b> - Everything slate has to offer.</p>
+
+                <p><b>@dsbn/slate-css/css/base.scss</b> - The base styles, basically everything in docs</p>
+
+                <p><b>@dsbn/slate-css/css/utility.scss</b> - Collection of utility classes</p>
+
+                <h2>With Sass</h2>
                 
-                <p>Start with installing from our npm package and installing the PostCSS dependancies.</p>
+                <p>To hook into the Sass pipeline start by using the includes under the <code>src</code> directory.</p>
 
-<pre class="code">npm i -s @dsbn/slate-css postcss-loader postcss-simple-vars postcss-mixins postcss-nested postcss-for</pre>
+                <pre class="code">@dsbn/slate-css/src/all.scss</pre>
 
-                <p>The next step is to configure your postcss setup. There are many different options for this but a simple setup is with a new slate.config.js file:</p>
-                
-<pre class="code">module.exports = {
-    plugins: [
-      // ...
-      require('@dsbn/slate-css'),
-      // Your post css plugins
-      // ...
-    ]
-}</pre>
+                <p>You can pick and choose from the following items in slide</p>
 
-                <p>To add slate to your pipeline, insert the slate includes into your main css file:</p>
+                <p><b>@dsbn/slate-css/src/all.scss</b> - Everything slate has to offer.</p>
 
-                <pre class="code">@slate base;
-@slate utility;</pre>
+                <p><b>@dsbn/slate-css/src/base.scss</b> - The base styles, basically everything in docs</p>
 
+                <p><b>@dsbn/slate-css/src/utility.scss</b> - Collection of utility classes</p>
             </div>
         </div>
     </section>
