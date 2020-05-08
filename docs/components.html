@@ -10,7 +10,7 @@
 <body data-theme="docs">
     <header class="container row" x-data="{ show: false }">
         <a class="brand" href="index.html">slate</a>
-        <span class="badge badge--primary">0.1.0-alpha.5</span>
+        <span class="badge badge--primary">0.1.0-alpha.6</span>
         <nav class="nav nav@xs" :class="{ 'active': show }">
             <ul class="nav-items">
                 <li class="nav-item"><a class="nav-link" href="docs.html">Docs</a></li>
@@ -19,52 +19,38 @@
         </nav>
         <button class="nav-toggle@xs ml-auto" :class="{ 'active': show }" type="button" @click="show = !show"><svg fill="none" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg></button>
     </header>
-    <section class="hero text-center">
-        <h1>Coming soon!</h1>
-        
-        <div class="rectangular-plane">
-            <div class="rectangular-group">
-                <div class="rectangle rectangle--xl rectangle--outline"></div>
-                <div class="ml-3 rectangle rectangle--l"></div>
-            </div>
-            <div class="rectangular-group">
-                <div class="rectangle rectangle--xxl rectangle--dark"></div>
-                <div class="ml-8 rectangle rectangle--outline rectangle--gray"></div>
-                <div class="ml-5 rectangle rectangle--l"></div>
-            </div>
-            <div class="rectangular-group">
-                <div class="ml-7 rectangle rectangle--xl rectangle--dark"></div>
-                <div class="fl rectangle rectangle--xl rectangle--dark"></div>
-                <div class="fl ml-1 rectangle rectangle"></div>
-            </div>
-            <div class="rectangular-group">
-                <div class="rectangle rectangle--l rectangle--outline"></div>
-                <div class="ml-1 rectangle rectangle--xl"></div>
-            </div>
-            <div class="rectangular-group">
-                <div class="rectangle rectangle--l"></div>
-            </div>
-            <div class="rectangular-group">
-                <div class="rectangle rectangle--l rectangle--outline"></div>
-            </div>
-        </div>
-    </section>
-    <section class="page container" style="display: none;">
+    <section class="page container">
         <div class="row">
             <div class="col" x-data="{ show: false }">
                 <button class="nav-toggle@s ml-auto" :class="{ 'active': show }" type="button" @click="show = !show"><svg fill="none" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg></button>
                 <nav class="page-nav nav@s nav--stacked" :class="{ 'active': show }">
                     <ul class="nav-items">
+                        <li class="nav-item"><a class="nav-link" href="#general">General</a></li>
                         <li class="nav-item"><a class="nav-link" href="#navigation">Navigation</a></li>
                     </ul>
                 </nav>
             </div>
             <div class="col-10@m">
                 <h1>Components</h1>
-
-                <h2 id="navigation">Navigation</h2>
+                
+                <h2 id="navigation">General</h2>
                 <div class="row">
                     <div class="col-4">
+                        <div class="component">
+                            <a href="component_panel.html">
+                                <div class="icon"></div>
+                                <div class="p">
+                                    <div class="title text-m">Panel</div>
+                                    <p class="text--gray">Group other componenets with a simple panel</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <h2 id="navigation">Navigation</h2>
+                <div class="row">
+                    <!-- <div class="col-4">
                         <div class="component">
                             <a href="component_navbar.html">
                                 <div class="icon"></div>
@@ -74,7 +60,7 @@
                                 </div>
                             </a>
                         </div>
-                    </div>
+                    </div> -->
                     <div class="col-4">
                         <div class="component">
                             <a href="component_nav.html">

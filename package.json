@@ -1,7 +1,7 @@
 {
   "name": "@dsbn/slate-css",
   "description": "Slate is a ui system for building web sites / apps",
-  "version": "0.1.0-alpha.5",
+  "version": "0.1.0-alpha.6",
   "main": "css/slate.css",
   "style": "css/slate.css",
   "directories": {

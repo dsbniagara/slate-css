@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel Component - Slate</title>
+    <link rel="stylesheet" href="./css/docs.scss" />
+
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.js" defer></script>
+</head>
+<body data-theme="docs">
+    <header class="container row" x-data="{ show: false }">
+        <a class="brand" href="index.html">slate</a>
+        <span class="badge badge--primary">0.1.0-alpha.6</span>
+        <nav class="nav nav@xs" :class="{ 'active': show }">
+            <ul class="nav-items">
+                <li class="nav-item"><a class="nav-link" href="docs.html">Docs</a></li>
+                <li class="nav-item active"><a class="nav-link" href="components.html" >Components</a></li>
+                <!-- <li class="nav-item"><a class="nav-link" href="docs.html" >Globals</a></li> -->
+            </ul>
+        </nav>
+
+        <button class="nav-toggle@xs ml-auto" :class="{ 'active': show }" type="button" @click="show = !show"><svg fill="none" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg></button>
+    </header>
+    <section class="page container">
+        <div class="row">
+            <div class="col">
+                <div class="breadcrumb">
+                    <a href="components.html">Components</a>
+                    <a href="#">General</a>
+                </div>
+                <h1>Panel</h1>
+                <p>Group other componenets with a simple panel.</p>
+
+                <div class="panel">
+                    I am a panel.
+                </div>
+
+                <h2>Header</h2>
+                <div class="panel">
+                    <div class="panel-header">
+                        <h5>Panel header</h5>
+                    </div>
+                    I am a panel.
+                </div>
+
+                <h2>Table</h2>
+                <p>Add <code>.panel--table</code> to your <code>.panel</code> to get a paddingless table. The first and last columns (td,th) also get a padding bump to give more space from the edge.</p>
+                <div class="panel panel--table">
+                    <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>First Name</th>
+                                    <th>Last Name</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>Jim</td>
+                                    <td>Smith</td>
+                                    <td>Approved</td>
+                                </tr>
+                                <tr>
+                                    <td>1</td>
+                                    <td>Jim</td>
+                                    <td>Smith</td>
+                                    <td>Approved</td>
+                                </tr>
+                            </thead>
+                        </table>
+                </div>
+
+                <h3>Reference</h3>
+
+                <h4>Variables</h4>
+
+                <pre class="code">:root {
+    --panel-padding: var(--space-l);
+    --panel-radius: .8rem;
+    --panel-border: 0px none;
+    --panel-shadow: 0 1px 1px #00000012, 0 2px 5px #0000001a;
+    --panel-margin: 0 0 1rem 0;
+    --panel-background: transparent;
+}</pre>
+
+                <h4>Source</h4>
+                <pre class="code">@import '@dsbn/slate-css/src/components/panel';</pre>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

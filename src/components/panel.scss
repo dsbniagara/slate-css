@@ -1,13 +1,18 @@
-
-
-
+:root {
+    --panel-padding: var(--space-l);
+    --panel-radius: .8rem;
+    --panel-border: 0px none;
+    --panel-shadow: 0 1px 1px #00000012, 0 2px 5px #0000001a;
+    --panel-margin: 0 0 1rem 0;
+    --panel-background: transparent;
+}
 
 .panel {
     padding: var(--panel-padding);
-    border-radius: var(--border-radius);
-    margin-bottom: var(--panel-padding);
+    border-radius: var(--panel-radius);
+    box-shadow: var(--panel-shadow);
+    margin: var(--panel-margin);
     position: relative;
-    box-shadow: 0 1px 1px #00000012, 0 2px 5px #0000001a;
     
     &.panel--flat {
         box-shadow: none;
@@ -16,54 +21,27 @@
     &--primary {        
         border-top: 3px solid var(--color-primary);
     }
-    &--secondary {        
-        border-top: 3px solid var(--color-secondary);
-    }
-    &--approved,
-    &--success,
-    &--green {        
-        border-top: 3px solid var(--color-success);
-    }
-    &--info,
-    &--blue {        
-        border-top: 3px solid var(--color-info);
-    }
-    &--error,
-    &--red {        
-        border-top: 3px solid var(--color-error);
-    }
-    &--declined,
-    &--warning,
-    &--orange {        
-        border-top: 3px solid var(--color-warning);
+    &--accent {        
+        border-top: 3px solid var(--color-accent);
     }
 }
 .panel-header {
-    margin-bottom: 1em;
-    margin: 12px -34px 12px;
-    padding: 12px 34px;
     border-bottom: 2px solid #f9fafc;
-    &:first-child {
-        margin-top: -24px;
-    }
+    margin-bottom: 1rem;
     &.no-border {
         border: 0 none;
     }
-    &+.panel-table {
-        margin-top: 0;
-    }
-    .title {
-        color: var(--color-light);
-    }
 }
-.panel-table {
-    margin: calc(-1 * var(--panel-padding) );
+.panel--table {
+    padding: 0;
     .table {
         border-radius: var(--border-radius);
         margin-bottom: 0;
     }
-    td, th {
-        padding: .75rem var(--panel-padding);
-        vertical-align: top;
+    td:first-child, th:first-child {
+        padding-left: var(--space-l);
+    }
+    td:last-child, th:last-child {
+        padding-right: var(--space-l);
     }
 }
