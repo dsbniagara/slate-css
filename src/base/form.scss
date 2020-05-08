@@ -21,6 +21,8 @@
     color: var(--color-gray);
 }
 
+select.form-input,
+textarea.form-input,
 input.form-input,
 div.form-input > input {
     -moz-appearance: none;
@@ -33,7 +35,6 @@ div.form-input > input {
     color: var(--color-text);
     border-radius: var(--input-radius);
     border: var(--input-border);
-    min-height: 2.8rem;
 
     &--hover,&:hover {
         border: var(--input-border-hover);
@@ -44,6 +45,13 @@ div.form-input > input {
         border: var(--input-border-active);
         box-shadow: var(--input-shadow-active);
     }
+}
+
+div.form-input,
+div.form-input--select,
+select.form-input,
+input:not([type=checkbox]):not([type=radio]).form-input {
+min-height: 2.8rem;
 }
 
 div.form-input--select,
