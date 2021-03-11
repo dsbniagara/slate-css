@@ -1,16 +1,16 @@
 :root {
-    --device-xs: $device-xs;
-    --device-s: $device-s;
-    --device-m: $device-m;
-    --device-l: $device-l;
-    --device-xl: $device-xl;
-    --device-xxl: $device-xxl;
-    --device-xs-container: $device-xs-container;
-    --device-s-container: $device-s-container;
-    --device-m-container: $device-m-container;
-    --device-l-container: $device-l-container;
-    --device-xl-container: $device-xl-container;
-    --device-xxl-container: $device-xxl-container;
+    --device-xs: #{$device-xs};
+    --device-s: #{$device-s};
+    --device-m: #{$device-m};
+    --device-l: #{$device-l};
+    --device-xl: #{$device-xl};
+    --device-xxl: #{$device-xxl};
+    --device-xs-container: #{$device-xs-container};
+    --device-s-container: #{$device-s-container};
+    --device-m-container: #{$device-m-container};
+    --device-l-container: #{$device-l-container};
+    --device-xl-container: #{$device-xl-container};
+    --device-xxl-container: #{$device-xxl-container};
 }
 
 .only\@s,
