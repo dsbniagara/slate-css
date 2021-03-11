@@ -29,6 +29,7 @@ Vue.component('demo', {
         }
     },
     mounted() {
+        console.log('Fetching component',this.componentUrl)
         fetch( this.componentUrl ).then(response => {
             return response.text();
         })
