@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel Component - Slate</title>
+    <link rel="stylesheet" href="./css/docs.scss" />
+
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.js" defer></script>
+</head>
+<body data-theme="docs">
+    <header class="container row" x-data="{ show: false }">
+        <a class="brand" href="index.html">slate</a>
+        <span class="badge badge--primary">0.1.0-alpha.8</span>
+        <nav class="nav nav@xs" :class="{ 'active': show }">
+            <ul class="nav-items">
+                <li class="nav-item"><a class="nav-link" href="docs.html">Docs</a></li>
+                <li class="nav-item active"><a class="nav-link" href="components.html" >Components</a></li>
+                <!-- <li class="nav-item"><a class="nav-link" href="docs.html" >Globals</a></li> -->
+            </ul>
+        </nav>
+
+        <button class="nav-toggle@xs ml-auto" :class="{ 'active': show }" type="button" @click="show = !show"><svg fill="none" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg></button>
+    </header>
+    <section class="page container">
+        <div class="row">
+            <div class="col">
+                <div class="breadcrumb">
+                    <a href="components.html">Components</a>
+                    <a href="#">General</a>
+                </div>
+                <h1>Dropdown</h1>
+
+                <div class="dropdown" x-data="{ showD: false }">
+                    <button type="button" class="btn" @click="showD = !showD">
+                        <span>Dropdown</span> 
+                        <svg version="1.1" viewBox="0 0 512 512" width="16px" height="16px" class="icon icon--arrow-down">
+                            <path d="M98.9,184.7l1.8,2.1l136,156.5c4.6,5.3,11.5,8.6,19.2,8.6c7.7,0,14.6-3.4,19.2-8.6L411,187.1l2.3-2.6  c1.7-2.5,2.7-5.5,2.7-8.7c0-8.7-7.4-15.8-16.6-15.8v0H112.6v0c-9.2,0-16.6,7.1-16.6,15.8C96,179.1,97.1,182.2,98.9,184.7z" class="fill"></path></svg>
+                    </button> 
+                    <div class="dropdown-list" :class="{ 'visible': showD }"> 
+                        <a class="dropdown-item selected">Dropdown Item 1</a>
+                        <a class="dropdown-item">Dropdown Item 2</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+</body>
+</html>
