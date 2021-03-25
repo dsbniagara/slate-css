@@ -87,9 +87,14 @@
     &--l {
         font-size: var(--btn-font-size-l);
     }
-
+    &--block {
+        display: block;
+    }
     .icon:last-child {
         margin-left: .5rem;
+        .fill {
+            fill: var(--color-gray)
+        }
     }
    
 }

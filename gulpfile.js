@@ -12,7 +12,7 @@ gulp.task("build:components", () => build("./src/components.scss","components.cs
 gulp.task("build:effects", () => build("./src/effects.scss","effects.css") )
 
 gulp.task("default", function() {
-    gulp.watch("./src/**/*.css", gulp.series("build"))
+    gulp.watch("./src/**/*.scss", gulp.series("build"))
 })
 gulp.task("build", gulp.series(
         'build:all',
