@@ -1,5 +1,5 @@
 :root {
-    --input-radius: 0.25em;
+    --input-radius: .4rem;
 
     --input-border: 1px solid #cdd5dc;
     --input-border-hover: 1px solid  var(--color-gray);
@@ -11,8 +11,8 @@
 
     --input-check-radio-size: 20px;
 
-    --input-focus-color: var(--color-primary-a-40);
-    --input-focus-ring: 0px 0px 0px 4px var(--input-focus-color), 0px 1px 4px 1px var(--input-focus-color);
+    --input-focus-color: var(--color-primary-a-90);
+    --input-focus-ring: 0px 0px 0px 3px var(--input-focus-color), 0px 1px 4px 1px var(--input-focus-color);
 }
 ::placeholder {
     color: var(--color-gray);
