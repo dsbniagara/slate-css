@@ -29,6 +29,7 @@
     font-weight: var(--btn-font-weight);
     color: var(--color-gray-dark);
     border: var(--btn-border-default);
+    transition: 200ms;
 
     &:hover {
         box-shadow: var(--btn-shadow-hover);

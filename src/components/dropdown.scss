@@ -5,18 +5,6 @@
     button {
         display: flex;
         padding: .8rem 1.2rem;
-        box-shadow: none;
-        border-radius: var(--input-radius);
-        border: var(--input-border);
-        &--hover,&:hover {
-            border: var(--input-border-hover);
-            box-shadow: var(--input-shadow-hover);
-        }
-        &--focus,&:focus {
-            outline: 0 none;
-            border: var(--input-border-active);
-            box-shadow: var(--input-shadow-active);
-        }
     }
     // &:hover .dropdown-list,
     &:focus-within .dropdown-list {
