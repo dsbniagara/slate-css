@@ -89,6 +89,7 @@
     }
     &--block {
         display: block;
+        width: 100%;
     }
     .icon:last-child {
         margin-left: .5rem;
@@ -96,5 +97,4 @@
             fill: var(--color-gray)
         }
     }
-   
 }
