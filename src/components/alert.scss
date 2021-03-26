@@ -1,0 +1,30 @@
+.alert {
+    display: flex;
+    align-items: center;
+    padding: var(--space-m);
+    border-radius: var(--space-s);
+
+    background: var(--color-primary-a-10);
+    color: var(--color-primary-dark);
+
+    font-weight: bold;
+    margin-bottom: 1rem;
+
+    &--warning {
+        background: rgba(255, 166, 0, 0.1);
+        color: #c78100;
+
+        .fill {
+            fill: rgba(255, 166, 0, 0.9);
+        }
+    }
+
+    &--danger {
+        background: var(--color-danger-a-10);
+        color: var(--color-danger);
+
+        .fill {
+            fill: rgba(255, 166, 0, 0.9);
+        }
+    }
+}

@@ -35,8 +35,8 @@
         box-shadow: var(--btn-shadow-hover);
     }
     &:focus {
-        --btn-focus-color: var(--color-primary-a-80);
-        --btn-focus-ring: 0 0 0 2px #fff, 0px 0px 0px 5px var(--btn-focus-color), 0px 1px 4px 1px var(--btn-focus-color);
+        --btn-focus-color: var(--color-primary);
+        --btn-focus-ring: 0 0 0 2px #fff, 0px 0px 0px 4px var(--btn-focus-color), 0px 1px 4px 1px var(--btn-focus-color);
         box-shadow: var(--btn-focus-ring);
         outline: none;
     }
@@ -50,7 +50,7 @@
             background: var(--color-primary-dark);
         }
         &:focus {
-            --btn-focus-color: var(--color-primary-a-80);
+            --btn-focus-color: var(--color-primary);
         }
     }
     &--accent {
@@ -62,7 +62,7 @@
             background: var(--color-accent-dark);
         }
         &:focus {
-            --btn-focus-color: var(--color-accent-a-80);
+            --btn-focus-color: var(--color-accent);
         }
     }
     &--subtle {
@@ -74,7 +74,7 @@
             background: var(--color-gray-light);
         }
         &:focus {
-            --btn-focus-color: var(--color-gray-a-80);
+            --btn-focus-color: var(--color-gray);
         }
     }
     &--disabled,

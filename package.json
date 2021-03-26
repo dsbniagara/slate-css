@@ -1,7 +1,7 @@
 {
   "name": "@dsbn/slate-css",
   "description": "Slate is a css framework",
-  "version": "0.1.0-alpha.10",
+  "version": "0.1.0-alpha.11",
   "main": "css/slate.css",
   "style": "css/slate.css",
   "scripts": {

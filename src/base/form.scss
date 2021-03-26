@@ -2,7 +2,7 @@
     --input-radius: .4rem;
 
     --input-border: 1px solid #cdd5dc;
-    --input-border-hover: 1px solid  var(--color-gray);
+    --input-border-hover: 1px solid var(--color-gray);
     --input-border-active: 1px solid var(--color-primary);
 
     --input-shadow: 0 1px 1px #0000000f;
@@ -11,7 +11,7 @@
 
     --input-check-radio-size: 20px;
 
-    --input-focus-color: var(--color-primary-a-90);
+    --input-focus-color: var(--color-primary);
     --input-focus-ring: 0px 0px 0px 3px var(--input-focus-color), 0px 1px 4px 1px var(--input-focus-color);
 }
 ::placeholder {
@@ -105,8 +105,8 @@ input[type=checkbox].form-input {
         background-color: var(--color-primary);
     }
     &--focus, &:focus {
-        --checkradio-focus-color: var(--color-primary-a-90);
-        --checkradio-focus-ring: 0 0 0 2px #fff, 0px 0px 0px 5px var(--checkradio-focus-color), 0px 1px 4px 1px var(--checkradio-focus-color);
+        --checkradio-focus-color: var(--color-primary);
+        --checkradio-focus-ring: 0 0 0 2px #fff, 0px 0px 0px 4px var(--checkradio-focus-color), 0px 1px 4px 1px var(--checkradio-focus-color);
         box-shadow: var(--checkradio-focus-ring);
         outline: none;
     }
