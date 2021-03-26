@@ -7,7 +7,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "prepublishOnly": "gulp build",
-    "watch": "gulp",
+    "dev": "gulp dev",
+    "copy:docs": "gulp copy:docs",
     "build": "gulp build",
     "build:all": "gulp build:all",
     "build:base": "gulp build:base",

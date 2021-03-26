@@ -11,10 +11,10 @@ gulp.task("build:utility", () => build("./src/utility.scss","utility.css") )
 gulp.task("build:components", () => build("./src/components.scss","components.css") )
 gulp.task("build:effects", () => build("./src/effects.scss","effects.css") )
 
-gulp.task("default", function() {
-    gulp.watch("./src/**/*.scss", gulp.series("build"))
+gulp.task('dev', function() {
+    gulp.watch('./src/**/*.scss', gulp.series('build','copy:docs'))
 })
-gulp.task("build", gulp.series(
+gulp.task('build', gulp.series(
         'build:all',
         'build:base',
         'build:utility',
@@ -22,6 +22,10 @@ gulp.task("build", gulp.series(
         'build:effects'
     )
 )
+gulp.task('copy:docs', function() {
+    return gulp.src('./css/*.css')
+      .pipe(gulp.dest('../slate-docs/contents/css/slate/'));
+})
 
 function build(source,name){
     return gulp.src(source)
