@@ -17,7 +17,6 @@
     display: inline-flex;
     align-items: center;
     text-align: center;
-    transition: ease .4s background shadow;
     cursor: pointer;
     border: 0 none;
     background: #fff;
@@ -93,13 +92,7 @@
         font-size: var(--btn-font-size-l);
     }
     &--block {
-        display: block;
         width: 100%;
-    }
-    .icon:last-child {
-        margin-left: .5rem;
-        .fill {
-            fill: var(--color-gray)
-        }
+        justify-content: center;
     }
 }
