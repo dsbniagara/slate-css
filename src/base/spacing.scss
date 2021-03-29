@@ -21,6 +21,10 @@
     .#{$prefix}b { #{$prop}-bottom: var(--space); }
     .#{$prefix}l-auto { #{$prop}-left: auto; }
     .#{$prefix}r-auto { #{$prop}-right: auto; }
+    .#{$prefix}t-auto { #{$prop}-top: auto; }
+    .#{$prefix}b-auto { #{$prop}-bottom: auto; }
+    .#{$prefix}x-auto { #{$prop}-left: auto; #{$prop}-right: auto; }
+    .#{$prefix}y-auto { #{$prop}-top: auto; #{$prop}-bottom: auto; }
     
     @for $i from 2 to 12 {
         .#{$prefix}-#{$i} { #{$prop}: calc(#{$i}*var(--space)); }
@@ -36,33 +40,33 @@
 @include space ('m', 'margin');
 @include space ('p', 'padding');
 
-.space-xxxs {
+.space--xxxs {
     --space: var(--space-xxxs);
 }
-.space-xxs {
+.space--xxs {
     --space: var(--space-xxs);
 }
-.space-xs {
+.space--xs {
     --space: var(--space-xs);
 }
-.space-s {
+.space--s {
     --space: var(--space-s);
 }
-.space-m {
+.space--m {
     --space: var(--space-m);
 }
-.space-m {
+.space--m {
     --space: var(--space-m);
 }
-.space-l {
+.space--l {
     --space: var(--space-l);
 }
-.space-xl {
+.space--xl {
     --space: var(--space-xl);
 }
-.space-xxl {
+.space--xxl {
     --space: var(--space-xxl);
 }
-.space-xxxl {
+.space--xxxl {
     --space: var(--space-xxxl);
 }

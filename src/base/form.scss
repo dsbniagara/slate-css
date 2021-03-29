@@ -1,8 +1,8 @@
 :root {
-    --input-radius: 0.25em;
+    --input-radius: .4rem;
 
     --input-border: 1px solid #cdd5dc;
-    --input-border-hover: 1px solid  var(--color-gray);
+    --input-border-hover: 1px solid var(--color-gray);
     --input-border-active: 1px solid var(--color-primary);
 
     --input-shadow: 0 1px 1px #0000000f;
@@ -10,6 +10,9 @@
     --input-shadow-active: 0px 0px 0px 3px var(--color-primary-a-10), 0px 1px 4px 1px var(--color-primary-a-20);
 
     --input-check-radio-size: 20px;
+
+    --input-focus-color: var(--color-primary);
+    --input-focus-ring: 0px 0px 0px 3px var(--input-focus-color), 0px 1px 4px 1px var(--input-focus-color);
 }
 ::placeholder {
     color: var(--color-gray);
@@ -35,6 +38,7 @@ div.form-input > input {
     color: var(--color-text);
     border-radius: var(--input-radius);
     border: var(--input-border);
+    transition: 200ms;
 
     &--hover,&:hover {
         border: var(--input-border-hover);
@@ -42,8 +46,7 @@ div.form-input > input {
     }
     &--focus,&:focus {
         outline: 0 none;
-        border: var(--input-border-active);
-        box-shadow: var(--input-shadow-active);
+        box-shadow: var(--input-focus-ring);
     }
 }
 
@@ -51,7 +54,7 @@ div.form-input,
 div.form-input--select,
 select.form-input,
 input:not([type=checkbox]):not([type=radio]).form-input {
-min-height: 2.8rem;
+    min-height: 2.8rem;
 }
 
 div.form-input--select,
@@ -79,6 +82,9 @@ input:not([type=checkbox]):not([type=radio]).form-input {
         padding: 1em 1.4em;
         font-size: 1.1em;
     }
+    &--focus, &:focus {
+        border: 1px solid transparent;
+    }
 }
 
 /* Radio, check and switch */
@@ -97,6 +103,12 @@ input[type=checkbox].form-input {
     &--checked, &:checked {
         border-color: var(--color-primary);
         background-color: var(--color-primary);
+    }
+    &--focus, &:focus {
+        --checkradio-focus-color: var(--color-primary);
+        --checkradio-focus-ring: 0 0 0 2px #fff, 0px 0px 0px 4px var(--checkradio-focus-color), 0px 1px 4px 1px var(--checkradio-focus-color);
+        box-shadow: var(--checkradio-focus-ring);
+        outline: none;
     }
 }
 div.form-input--checkbox,
@@ -141,7 +153,7 @@ input.form-switch {
         width: calc((var(--input-check-radio-size) + 2px) * 2);
         border-radius: calc(var(--input-check-radio-size) + 2px);
         background-color: #f0f0f0;
-        transition: ease all .4s;
+        transition: ease all 200ms;
     }
     &:after {
         border: 1px solid #c3c3c3;
@@ -152,8 +164,8 @@ input.form-switch {
         left: 2px;
         top: 2px;
         background-color: white;
-        -webkit-transition: .4s;
-        transition: .4s;
+        -webkit-transition: 200ms;
+        transition: 200ms;
         border-radius: 50%;
     }
     &:hover:before {
@@ -178,12 +190,15 @@ input.form-switch {
         transform: translateX(var(--input-check-radio-size));
         border: 1px solid var(--color-primary);
     }
-    &--focus:after,&:focus:after {
-        border: 1px solid var(--color-primary);
-        box-shadow: var(--input-shadow-active);
+    &--focus,&:focus {
+        outline: none;
+        &:after {
+            border: 1px solid var(--color-primary);
+            box-shadow: var(--input-focus-ring);
+        }
     }
 
-    &--large {
+    &--l {
         &:before {
             height: calc((var(--input-check-radio-size) + 4px) * 1.6);
             width: calc((var(--input-check-radio-size) + 2px) * 2 * 1.6);

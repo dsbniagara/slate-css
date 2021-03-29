@@ -1,18 +1,14 @@
 {
   "name": "@dsbn/slate-css",
-  "description": "Slate is a ui system for building web sites / apps",
-  "version": "0.1.0-alpha.9",
+  "description": "Slate is a css framework",
+  "version": "0.1.0-alpha.12",
   "main": "css/slate.css",
   "style": "css/slate.css",
-  "directories": {
-    "doc": "docs"
-  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "docs": "parcel --port 1236 --no-cache docs/index.html",
-    "docs:build": "parcel build --no-cache docs/index.html",
     "prepublishOnly": "gulp build",
-    "watch": "gulp",
+    "dev": "gulp dev",
+    "copy:docs": "gulp copy:docs",
     "build": "gulp build",
     "build:all": "gulp build:all",
     "build:base": "gulp build:base",
@@ -29,12 +25,13 @@
     "sass": "^1.32.8"
   },
   "dependencies": {
+    "express": "^4.17.1",
     "fs-promise": "^2.0.3",
     "gulp-clean-css": "^4.3.0",
     "gulp-rename": "^1.4.0",
     "i": "^0.3.6",
     "lodash": "^4.17.15",
-    "parcel": "^1.12.4",
+    "parcel": "^2.0.0-beta.2",
     "parcel-bundler": "^1.12.4"
   },
   "repository": {

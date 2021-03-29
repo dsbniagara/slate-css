@@ -96,3 +96,7 @@ select {
     scroll-behavior: auto !important;
   }
 }
+
+:focus {
+  outline: var(--color-primary) auto 1px;
+}
