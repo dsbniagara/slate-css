@@ -15,6 +15,14 @@
     &--right.dropdown .dropdown-list {
         right: 0;
     }
+    &--center.dropdown .dropdown-list {
+        left: 50%;
+        transform: scale(.98) translateX(-50%);
+    }
+    &:focus-within.dropdown--center .dropdown-list,
+    &--visible.dropdown--center.dropdown .dropdown-list {
+        transform: scale(1) translateY(5px) translateX(-50%);
+    }
     
     button {
         display: flex;
